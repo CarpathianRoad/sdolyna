@@ -1,0 +1,43 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 4, 2015, 9:59:54 AM
+    Author     : kiwi
+*/
+
+ .image-dialog .cke_dialog_tabs  {
+        display:none;
+        }
+        .image-dialog .cke_dialog_contents_body{
+              height: 150px !important;
+        }
+        .image-dialog .cke_dialog_contents_body + .cke_dialog_contents {
+            display: none;
+        }
+    .image-dialog .cke_dialog_contents_body .cke_dialog_ui_vbox.cke_dialog_page_contents table tr:not(:first-child){
+    display: none;
+    }
+    .image-dialog .cke_dialog_ui_vbox.cke_dialog_page_contents table tr:first-child .cke_dialog_ui_hbox_first{
+        display: none
+    }
+    .image-dialog .cke_dialog_ui_vbox.cke_dialog_page_contents table tr:first-child .cke_dialog_ui_hbox_last a{
+        width: 100%;
+  height: 50px;
+  padding-top: 35px;  border: 0 !important;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+  background-image: none;
+    }
+    .image-dialog .cke_dialog_ui_vbox.cke_dialog_page_contents table tr:first-child .cke_dialog_ui_hbox_last a:hover, .image-dialog .cke_dialog_ui_vbox.cke_dialog_page_contents table tr:first-child .cke_dialog_ui_hbox_last a:focus{
+        text-decoration: blink;
+    }
+    .image-dialog .cke_dialog_ui_vbox.cke_dialog_page_contents table tr:first-child .cke_dialog_ui_hbox_last a span{
+        font-size: 20px;
+  color: #fff;
+    }
+    .image-dialog .cke_dialog_footer {
+        display:none;
+    }
