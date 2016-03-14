@@ -27,6 +27,7 @@
 	<form action="${Constants.URL}system//do/insertdata" name="addArticleForm" id="addForm" method="POST" type="multipart/form-data">
             <input type="hidden" class="form-control" name="category" value="${category}">
             <input type="hidden" name="dir" id="dir-name" value="${folder}" />
+            <input type="hidden" name="gallery-items" id="gallery-items-input" />
             <div class="row add-row">
                 <div class="col-lg-12 margintop30 field">
                     <label for="tlt">Заголовок <span class="red-star">*</span></label>
@@ -61,6 +62,22 @@
             </div>
             <hr>
             </c:if>
+            <div class="row add-row img-upl">
+                <div class="col-lg-12 field">
+                    <label for="img">Галерея</label>
+                            <div class="img-content">
+                                <div class="image-upload">
+                                    
+                                    <span class="btn btn-primary btn-file">
+                                        Добавить изображение<input id="file-input" type="file">
+                                    </span>
+                                    
+                                </div>   
+                            </div>
+                            <input type="hidden" name="avatar-path" id="avatar-path" />                 
+                </div>
+            </div>
+            <hr>
             <div class="row add-row">
                 <div class="col-lg-12 margintop30 field">
                     <label for="tlt">Текст <span class="red-star">*</span></label><br/>
@@ -126,6 +143,39 @@
         $( "#datepicker-act" ).datepicker("option", "dateFormat", "dd.mm.yy");
         initCKE();
     });
+    $('.img-upl').on('change', '#file-input', function() {
+            
+        var result = [];
+        var len = $(this).get(0).files.length;
+        var count = 1;
+        for (var i = 0; i < $(this).get(0).files.length; ++i) {
+            var data = new FormData();
+        data.append('upload', $(this).get(0).files[i]);
+        data.append("path", "files/gallery");
+        jQuery.ajax({
+                    url: '${Constants.URL}uploadFile',
+                    data: data,
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    type: 'POST',
+                    success: function(data){
+                        var html_app = "<div class='gallery-item'><img class='remove-icon' src='${Constants.URL}img/remove.png' />"+data +
+                    "<input type='text' name='text' placeholder='Текст на русском' class='form-control galtextRU'>"+
+                    "<input type='text' name='text' placeholder='Текст на английском' class='form-control galtextEN'>"+
+                                "</div>";
+                        $(".img-content").append(html_app);
+                        initRemove();
+                    }
+                });
+        }   
+        });
+    function initRemove(){
+        $(".remove-icon").click(function(){
+            deleteFile($(this).parent("div").find(".main-img").attr("realpath"));
+            $(this).parent("div").remove();
+        });
+    }
     
     $(".lang-switch-text button").click(function(){
         $(".lang-switch-text button").removeClass("active");
@@ -148,6 +198,8 @@
         $(".input-avatar-text-lang").hide();
         $(".input-avatar-text-lang[lang='"+currentLangT+"']").show();
     });
+    
+    
     $(".sudmitData").click(function(e){
         $("div.validation").html('');
         $("div.validation").attr("id","");
@@ -160,6 +212,13 @@
             goToByScroll("active-validation");
         }
         if(isValidate) {
+            
+            $(".gallery-item").each(function() {
+                $("#gallery-items-input").val($("#gallery-items-input").val() + 
+                        "path:"+$(this).find(".main-img").attr("realpath") +
+                        ",textRU:"+$(this).find(".galtextRU").val() +
+                        ",textEN:"+$(this).find(".galtextEN").val() +"|");
+            });
             $("#addForm").submit();
         }
     });
@@ -170,14 +229,13 @@
             'slow');
     }
     function deleteFile(temp){
-        var path = "/files/avatars/" + $(temp).parent().find(".dz-details .dz-filename span").text();
         jQuery.ajax({
             url: '${Constants.URL}system/do/removefile',
             cache: false,
             contentType: false,
             processData: false,
             type: 'GET',
-            data: 'path='+path,
+            data: 'path='+temp,
             success: function(data){
             }
         });

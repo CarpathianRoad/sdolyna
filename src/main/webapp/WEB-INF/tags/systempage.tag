@@ -51,14 +51,14 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="main-header-title">
       <ul class="nav nav-pills navbar-left">
-        <li id="index">
-            <a href="${Constants.URL}system/index">
-                <span>Страны</span>
-            </a>
-        </li>
         <li id="category1">
             <a href="${Constants.URL}system/index/1">
                 <span>Фестивали</span>
+            </a>
+        </li>
+        <li id="index">
+            <a href="${Constants.URL}system/index">
+                <span>Страны</span>
             </a>
         </li>
         <li style="display:none" id="category2">
@@ -74,7 +74,7 @@
       </ul>
       <ul class="nav nav-pills navbar-right">
           
-          <li><a href="${Constants.URL}system/logout.do" class="btn-exit">Вихід</a></li>
+          <li><a href="${Constants.URL}system/logout.do" class="btn-exit">Выход</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

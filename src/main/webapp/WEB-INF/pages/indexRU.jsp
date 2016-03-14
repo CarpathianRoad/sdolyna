@@ -69,8 +69,8 @@
                                                             <ul class="nav navbar-nav">
                                                                   <li><a href="#about">Про компанию</a></li>
                                                                   <li><a href="#countries">Страны</a></li>
-                                                                  <li><a href="${Constants.URL}${lan}/articles/festivals#main">Фестивали</a></li>
-                                                                  <li><a href="${Constants.URL}${lan}/articles/camps#main">Детские лагеря</a></li>
+                                                                  <li><a href="${Constants.URL}${lan}/articles/festivals">Фестивали</a></li>
+                                                                  <li><a href="${Constants.URL}${lan}/articles/camps">Детские лагеря</a></li>
 
                                                             </ul>
                                                           

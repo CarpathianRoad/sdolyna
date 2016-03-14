@@ -184,7 +184,6 @@ img.edit-delete {
     border: none;
 }
 .panel .panel-collapse {
-        //border: 1px solid rgba(0, 0, 0, 0.15);
 }
 .list-group-item.first {
         background-color: #fff;    
@@ -571,4 +570,46 @@ cursor: default !important;
 }
 .delete-row strong {
     color: #000;
+}
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+.gallery-item {
+    text-align: center;
+    border: 2px solid #344F6D;
+    border-radius: 5px;
+    width: 300px;
+    float: left;
+    margin-right: 25px;
+    margin-top: 20px;
+    padding: 5px;
+}
+.gallery-item img {
+    height: 100px;
+    margin-top: 10px;
+}
+.gallery-item input {
+    margin-top: 10px;
+}
+.gallery-item .remove-icon {
+    height: 30px;
+    display: block;
+    margin: auto;
+    cursor: pointer;
 }

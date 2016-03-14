@@ -25,11 +25,33 @@
 		</div>
 
 		<div class="container">
-			<div class="row page-scroll">	
+			<div class="row ">	
 				<div class="col-md-12 main-text">
                                    ${article.article_text_ru} 
 				</div>		
+				<div class="gallery-items col-md-12 main-text">
+                                    <div id="slider1">
+                                            <a class="buttons prev" href="#">&#60;</a>
+                                            <div class="viewport">
+                                                    <ul class="overview">
+                                                        <c:forEach items="${article.article_images}" var="image">
+                                                                    <li><img src="${Constants.URL}${image.image_url}"/></li>
+                                                        </c:forEach>
+                                                    </ul>
+                                            </div>
+                                            <a class="buttons next" href="#">&#62;</a>
+                                    </div>
+				</div>	
 		</div>
                 </div>
 	</section>
 </t:indexpage>
+
+<script type="text/javascript" src="${Constants.URL}js/jquery.tinycarousel.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			$('#slider1').tinycarousel();
+		});
+	</script>

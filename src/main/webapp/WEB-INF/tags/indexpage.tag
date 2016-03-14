@@ -37,24 +37,6 @@
 	<div id="preloader">
 	  <div id="load"></div>
 	</div>
-	<!-- Section: intro -->
-    <section id="intro" class="intro">
-<div id="maximage">
-	<a href="${Constants.URL}${lan}/articles/full/2"><img src="${Constants.URL}img/gallery/slovakia/3.jpg" alt="2"  /></a>
-	<a href="${Constants.URL}${lan}/articles/full/5"><img src="${Constants.URL}img/gallery/croatia/1.jpg" alt="5"  /></a>
-	<a href="${Constants.URL}${lan}/articles/full/6"><img src="${Constants.URL}img/gallery/greece/3.jpg" alt="6"  /></a>
-	<a href="${Constants.URL}${lan}/articles/full/3"><img src="${Constants.URL}img/gallery/hungary/2.jpg" alt="3"  /></a>
-	<a href="${Constants.URL}${lan}/articles/full/4"><img src="${Constants.URL}img/gallery/slovenia/2.jpg" alt="4"  /></a>
-</div>
-		<div class="slogan">
-			<a href="index.html"><img src="${Constants.URL}img/logo.png" alt="" /></a>
-		</div>
-		<div class="page-scroll">
-			<a href="#about">
-				<i class="fa fa-angle-down fa-5x animated"></i>
-			</a>
-		</div>
-    </section>
 	<!-- /Section: intro -->
 
     <!-- Navigation -->
@@ -75,8 +57,8 @@
                                                             <ul class="nav navbar-nav">
                                                                   <li><a href="${Constants.URL}${lan}/index#about">Про компанию</a></li>
                                                                   <li><a href="${Constants.URL}${lan}/index#countries">Страны</a></li>
-                                                                  <li><a href="${Constants.URL}${lan}/articles/festivals#main">Фестивали</a></li>
-                                                                  <li><a href="${Constants.URL}${lan}/articles/camps#main">Детские лагеря</a></li>
+                                                                  <li><a href="${Constants.URL}${lan}/articles/festivals">Фестивали</a></li>
+                                                                  <li><a href="${Constants.URL}${lan}/articles/camps">Детские лагеря</a></li>
 
                                                             </ul>
                                                           

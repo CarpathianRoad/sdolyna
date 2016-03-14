@@ -12,6 +12,9 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.sql.SQLException;
 import java.text.ParseException;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -28,6 +31,7 @@ import ua.aits.sdolyna.functions.Constants;
 import ua.aits.sdolyna.functions.Helpers;
 import ua.aits.sdolyna.functions.Transliterator;
 import ua.aits.sdolyna.model.ArticleModel;
+import ua.aits.sdolyna.model.ArticleModel.GalleryModel;
 import ua.aits.sdolyna.model.UserModel;
 
 /**
@@ -60,7 +64,7 @@ public class SystemController {
         UserModel user = Users.getOneUserFullById(user_code);
         HttpSession session = request.getSession(true);
 	session.setAttribute("user", user);
-        return new ModelAndView("redirect:" + "/system/index");   
+        return new ModelAndView("redirect:" + "/system/index/1");   
     }
     @RequestMapping(value = {"/system/index", "/system/main", "/system/home"}, method = RequestMethod.GET)
     public ModelAndView index(HttpServletRequest request, HttpServletResponse response) throws SQLException, ClassNotFoundException, InstantiationException, IllegalAccessException, ParseException  {
@@ -107,6 +111,7 @@ public class SystemController {
     	model.addObject("category", temp.article_category);
     	model.addObject("cat_name", Helpers.getCatName(id));
         model.addObject("article", temp);
+        model.addObject("images", temp.article_images);
     	return model;
     }
     
@@ -138,7 +143,20 @@ public class SystemController {
         String date = request.getParameter("date");
         String date_end = request.getParameter("act-date");
     	String category = request.getParameter("category");
-    	Articles.insertArticle(titleEN, titleRU, textEN, textRU, category, date, date_end);
+        String files_data = request.getParameter("gallery-items");
+    	String id = Articles.insertArticle(titleEN, titleRU, textEN, textRU, category, date, date_end);
+        List<GalleryModel> items = new LinkedList<>();
+        String[] itm = files_data.split("\\|");
+        for(String i: itm) {
+            String[] row = i.split("\\,");
+            GalleryModel imag = Articles.new GalleryModel();
+            imag.setImage_url(row[0].replace("path:",""));
+            imag.setImage_title_ru(row[1].replace("textRU:",""));
+            imag.setImage_title_en(row[2].replace("textEN:",""));
+            imag.setImage_article_id(Integer.parseInt(id));
+            items.add(imag);
+        }
+        Articles.insertGalImages(items);
     	return new ModelAndView("redirect:" + "/system/index/"+category);
     }
         
@@ -153,8 +171,21 @@ public class SystemController {
     	String date = request.getParameter("date");
         String date_end = request.getParameter("act-date");
     	String category = request.getParameter("category");
-    	
+        String files_data = request.getParameter("gallery-items");
+    	List<GalleryModel> items = new LinkedList<>();
+        String[] itm = files_data.split("\\|");
+        for(String i: itm) {
+            String[] row = i.split("\\,");
+            GalleryModel imag = Articles.new GalleryModel();
+            imag.setImage_url(row[0].replace("path:",""));
+            imag.setImage_title_ru(row[1].replace("textRU:",""));
+            imag.setImage_title_en(row[2].replace("textEN:",""));
+            imag.setImage_article_id(Integer.parseInt(id));
+            items.add(imag);
+        }
+        Articles.cleanGallery(id);
     	Articles.updateArticle(id, titleEN, titleRU, textEN, textRU, category, date, date_end);
+        Articles.insertGalImages(items);
     	return new ModelAndView("redirect:" + "/system/index/"+category);
     }
     /* @RequestMapping(value = {"/system/do/deleteproject/{id}","/system/do/deleteproject/{id}/"})
@@ -201,7 +232,7 @@ public class SystemController {
             	try (BufferedOutputStream stream = new BufferedOutputStream( new FileOutputStream(serverFile))) {
                 	stream.write(bytes);
             	}
-            	return "";
+            	return name;
         	} catch (Exception e) {
             	return "You failed to upload " + name + " => " + e.getMessage();
         	}
@@ -217,4 +248,35 @@ public class SystemController {
     	Boolean result = temp.delete();
     	return result.toString();
     }
+    @RequestMapping(value = "/uploadFile", method = RequestMethod.POST)
+    public @ResponseBody
+    String uploadFileHandlerFull(@RequestParam("upload") MultipartFile file, @RequestParam("path") String path,  HttpServletRequest request) {
+        
+                String name = file.getOriginalFilename();
+        if (!file.isEmpty()) {
+            try {
+                byte[] bytes = file.getBytes();
+                // Creating the directory to store file
+                File dir = new File(Constants.home+path);
+                if (!dir.exists())
+                    dir.mkdirs();
+ 
+                // Create the file on server
+                File serverFile = new File(dir.getAbsolutePath()
+                        + File.separator + name);
+                try (BufferedOutputStream stream = new BufferedOutputStream(
+                        new FileOutputStream(serverFile))) {
+                    stream.write(bytes);
+                }
+                String link_path = serverFile.getAbsolutePath().replace(Constants.home,"");
+                return "<img class=\"main-img\" src=\""+Constants.URL+link_path+"\" realpath='"+link_path+"'  alt='" + link_path+file.getName() + "'  />";
+            } catch (Exception e) {
+                return "You failed to upload " + name + " => " + e.getMessage();
+            }
+        } else {
+            return "You failed to upload " + name
+                    + " because the file was empty.";
+        }
+    }
+    
 }

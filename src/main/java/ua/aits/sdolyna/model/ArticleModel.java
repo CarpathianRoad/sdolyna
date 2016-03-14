@@ -27,7 +27,8 @@ public class ArticleModel {
     public String article_date;
     public String article_date_end;
     public String article_lang;
-
+    public List<GalleryModel> article_images;
+    
     public Integer getArticle_id() {
         return article_id;
     }
@@ -101,11 +102,19 @@ public class ArticleModel {
     public void setArticle_date_end(String article_date_end) {
         this.article_date_end = article_date_end;
     }
+
+    public List<GalleryModel> getArticle_images() {
+        return article_images;
+    }
+
+    public void setArticle_images(List<GalleryModel> article_images) {
+        this.article_images = article_images;
+    }
     
     
     
     public List<ArticleModel> getArticlesByType(String type) throws SQLException {
-        ResultSet result = DB.getResultSet("SELECT * FROM `sdolyna_content` WHERE `article_category` = "+type+";");
+        ResultSet result = DB.getResultSet("SELECT * FROM `sdolyna_content` WHERE `article_category` = "+type+" ORDER BY article_id DESC;");
     	List<ArticleModel> articles = new LinkedList<>();
         while (result.next()) {
             ArticleModel article = new ArticleModel();
@@ -125,6 +134,7 @@ public class ArticleModel {
                 langs+= "EN,";
             }
             article.setArticle_lang(langs.substring(0, langs.length()-1));
+            article.setArticle_images(this.fillImages(article.article_id.toString()));
             articles.add(article);
         }
         DB.closeCon();
@@ -151,6 +161,7 @@ public class ArticleModel {
                 langs+= "EN,";
             }
             article.setArticle_lang(langs.substring(0, langs.length()-1));
+            article.setArticle_images(this.fillImages(article.article_id.toString()));
         
         DB.closeCon();
         return article;
@@ -176,6 +187,7 @@ public class ArticleModel {
                 langs+= "EN,";
             }
             article.setArticle_lang(langs.substring(0, langs.length()-1));
+            article.setArticle_images(this.fillImages(article.article_id.toString()));
         
         DB.closeCon();
         return article;
@@ -183,7 +195,7 @@ public class ArticleModel {
     
     
     public List<ArticleModel> getArticlesByTypeAndLan(String type, String lan) throws SQLException {
-        ResultSet result = DB.getResultSet("SELECT * FROM `sdolyna_content` WHERE `article_category` = "+type+";");
+        ResultSet result = DB.getResultSet("SELECT * FROM `sdolyna_content` WHERE `article_category` = "+type+" ORDER BY article_id DESC;");
     	List<ArticleModel> articles = new LinkedList<>();
         while (result.next()) {
             ArticleModel article = new ArticleModel();
@@ -203,16 +215,46 @@ public class ArticleModel {
                 langs+= "EN,";
             }
             article.setArticle_lang(langs.substring(0, langs.length()-1));
+            article.setArticle_images(this.fillImages(article.article_id.toString()));
             articles.add(article);
         }
         DB.closeCon();
         return articles;
     }
     
-    public void insertArticle(String titleEN, String titleRU, String textEN, String textRU, String category, String date, String date_end) throws SQLException, ClassNotFoundException, InstantiationException, IllegalAccessException {
+    public List<GalleryModel> fillImages(String id) throws SQLException {
+        ResultSet result = DB.getResultSet("SELECT * FROM `sdolyna_gallery` WHERE `image_article_id` = "+id+";");
+        List<GalleryModel> items = new LinkedList<>();
+        while (result.next()) {
+            GalleryModel imag = new GalleryModel();
+            imag.setImage_id(result.getInt("image_id"));
+            imag.setImage_url(result.getString("image_url"));
+            imag.setImage_title_ru(result.getString("image_title_ru"));
+            imag.setImage_title_en(result.getString("image_title_en"));
+            imag.setImage_article_id(result.getInt("image_article_id"));
+            items.add(imag);
+        }
+        DB.closeCon();
+        return items;
+    }
+    
+    public String insertArticle(String titleEN, String titleRU, String textEN, String textRU, String category, String date, String date_end) throws SQLException, ClassNotFoundException, InstantiationException, IllegalAccessException {
         DB.runQuery("INSERT INTO `sdolyna_content`(`article_category`, `article_title_ru`, `article_title_en`, `article_text_ru`, `article_text_en`, `article_date`, `article_date_end`) VALUES ("
             	+ ""+category+",'"+StringEscapeUtils.escapeSql(titleRU)+"','"+StringEscapeUtils.escapeSql(titleEN)+"','"+StringEscapeUtils.escapeSql(textRU)+"','"+StringEscapeUtils.escapeSql(textEN)+"','"+date+"','"+date_end+"');");
-    	DB.closeCon();
+    	ResultSet last_id = DB.getResultSet("SELECT MAX(article_id) as MaximumID FROM `sdolyna_content`;");
+        last_id.first();
+        String id = last_id.getString("MaximumID");
+        DB.closeCon();
+        return id;
+    }
+    public void insertGalImages(List<GalleryModel> items) throws SQLException {
+        
+            String sql_insert = "";
+            for(GalleryModel item : items) {
+                sql_insert += "('"+item.image_title_en+"','"+item.image_title_ru+"','"+item.image_url+"',"+item.image_article_id+"),";
+            }
+            DB.runQuery("INSERT INTO `sdolyna_gallery` (`image_title_en`, `image_title_ru`, `image_url`, `image_article_id`) "
+                    + "VALUES"+sql_insert.substring(0,sql_insert.length()-1)+";");
     }
     public void updateArticle(String id, String titleEN, String titleRU, String textEN, String textRU, String category, String date, String date_end) throws SQLException, ClassNotFoundException, InstantiationException, IllegalAccessException {
         DB.runQuery("UPDATE `sdolyna_content` SET "
@@ -225,11 +267,58 @@ public class ArticleModel {
     	DB.closeCon();
     }
     
+    public void cleanGallery(String id) throws SQLException {
+        DB.runQuery("DELETE FROM `sdolyna_gallery` WHERE `image_article_id` = "+id+";");
+    	DB.closeCon();
+    }
     
     public class GalleryModel {
         public Integer image_id;
         public String image_title_ru;
         public String image_title_en;
         public String image_url;
+        public Integer image_article_id;
+
+        public Integer getImage_id() {
+            return image_id;
+        }
+
+        public void setImage_id(Integer image_id) {
+            this.image_id = image_id;
+        }
+
+        public String getImage_title_ru() {
+            return image_title_ru;
+        }
+
+        public void setImage_title_ru(String image_title_ru) {
+            this.image_title_ru = image_title_ru;
+        }
+
+        public String getImage_title_en() {
+            return image_title_en;
+        }
+
+        public void setImage_title_en(String image_title_en) {
+            this.image_title_en = image_title_en;
+        }
+
+        public String getImage_url() {
+            return image_url;
+        }
+
+        public void setImage_url(String image_url) {
+            this.image_url = image_url;
+        }
+
+        public Integer getImage_article_id() {
+            return image_article_id;
+        }
+
+        public void setImage_article_id(Integer image_article_id) {
+            this.image_article_id = image_article_id;
+        }
+        
+        
     }
 }
