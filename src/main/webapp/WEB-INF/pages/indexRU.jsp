@@ -67,10 +67,10 @@
                                                       <!-- Collect the nav links, forms, and other content for toggling -->
                                                       <div class="collapse navbar-collapse" id="menu">
                                                             <ul class="nav navbar-nav">
-                                                                  <li><a href="#about">Про компанию</a></li>
-                                                                  <li><a href="#countries">Страны</a></li>
-                                                                  <li><a href="${Constants.URL}${lan}/articles/festivals">Фестивали</a></li>
-                                                                  <li><a href="${Constants.URL}${lan}/articles/camps">Детские лагеря</a></li>
+                                                                  <li id="menu-item-about"><a href="#about">Про компанию</a></li>
+                                                                  <li id="menu-item-countries"><a href="#countries">Страны</a></li>
+                                                                  <li id="menu-item-festivals"><a href="${Constants.URL}${lan}/articles/festivals">Фестивали</a></li>
+                                                                  <li id="menu-item-camps"><a href="${Constants.URL}${lan}/articles/camps">Детские лагеря</a></li>
 
                                                             </ul>
                                                           

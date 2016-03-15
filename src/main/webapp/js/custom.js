@@ -22,6 +22,8 @@
 				scrollTop: $($anchor.attr('href')).offset().top
 			}, 1500, 'easeInOutExpo');
 			event.preventDefault();
+                        $(".navbar-nav li").removeClass("active");
+                        $(this).parent("li").addClass("active");
 		});
 		$('.page-scroll a').bind('click', function(event) {
 			var $anchor = $(this);

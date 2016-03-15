@@ -141,7 +141,7 @@ img.img-responsive {
 .navbar-custom .nav li a:focus,
 .navbar-custom .nav li.active {
     outline: 0;
-    background-color: rgba(255,255,255,.2);
+    background-color: rgba(255,255,255,.2);    border-bottom: 2px solid;
 }
 
 .navbar-toggle {
@@ -826,7 +826,7 @@ footer .enter-link img {
     padding-top: 50px;
 }
 #main table td img {
-    width: 40px;
+        height: 30px;
 }
 .festival-table {
     margin: auto;
@@ -928,8 +928,24 @@ background-color:#fff;		}
     margin: 0 20px 0 0;
     padding: 1px;
     height: 121px;
-    border: 1px solid #dcdcdc;
     width: 236px;    
     text-align: center;
     overflow: hidden;
  }
+.modal-header {
+    border: none;
+}
+.modal-body {
+    text-align: center;
+}
+.modal-body img {
+    max-width: 100%;
+    max-height: 400px;
+}
+.modal-content h3 {
+        text-align: center;
+    margin-bottom: 10px;
+}
+#showItems {
+        margin-top: 50px;
+}

@@ -41,9 +41,11 @@
                                         <td><a href="${Constants.URL}${lan}/articles/full/${item.article_id}">${item.article_date} - ${item.article_date_end}</a></td>
                                         <td><a href="${Constants.URL}${lan}/articles/full/${item.article_id}">${item.article_title_ru}</a></td>
                                         <td>
-                                            <c:forEach items="${item.article_images}" var="image">
+                                            <a href="${Constants.URL}${lan}/articles/full/${item.article_id}#gallery">
+                                                <c:forEach items="${item.article_images}" begin="0" end="2" var="image">
                                                 <img src="${Constants.URL}${image.image_url}"/>
                                             </c:forEach>
+                                            </a>
                                         </td>
                                       </tr>
                                          </c:forEach>

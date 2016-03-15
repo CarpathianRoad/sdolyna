@@ -49,6 +49,10 @@
         <url-pattern>*.ttf</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.woff</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
  	<servlet-name>mvc-dispatcher</servlet-name>
         <url-pattern>/</url-pattern>  
     </servlet-mapping>

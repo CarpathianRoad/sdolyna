@@ -44,7 +44,7 @@
                 </div>
             </div>
             <hr>
-            <c:if test="${category != '0' && category != '3'}">
+            <c:if test="${category != '0'}">
                 
             <div class="row add-row">
                 <div class="col-lg-3 field">

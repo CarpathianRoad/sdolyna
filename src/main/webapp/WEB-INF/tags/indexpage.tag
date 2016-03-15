@@ -57,8 +57,8 @@
                                                             <ul class="nav navbar-nav">
                                                                   <li><a href="${Constants.URL}${lan}/index#about">Про компанию</a></li>
                                                                   <li><a href="${Constants.URL}${lan}/index#countries">Страны</a></li>
-                                                                  <li><a href="${Constants.URL}${lan}/articles/festivals">Фестивали</a></li>
-                                                                  <li><a href="${Constants.URL}${lan}/articles/camps">Детские лагеря</a></li>
+                                                                  <li id="menu-item-festivals"><a href="${Constants.URL}${lan}/articles/festivals">Фестивали</a></li>
+                                                                  <li id="menu-item-camps"><a href="${Constants.URL}${lan}/articles/camps">Детские лагеря</a></li>
 
                                                             </ul>
                                                           
@@ -128,6 +128,20 @@
 	<script src="${Constants.URL}js/jquery.maximage.js" type="text/javascript"></script>
     <!-- Custom Theme JavaScript -->
     <script src="${Constants.URL}js/custom.js"></script>
+    <script>
+        $(document).ready(function () {
+            var index = 6;
+            if('/Sdolyna/' === '/') { index = 5; }
+            var url = window.location.href.split('/')[index];
+            console.log(url);
+            if(url.indexOf("index") > -1) {
+                $("#menu-item-"+url.split('#')[1]).addClass("active");
+            }
+            else {
+                $("#menu-item-"+url).addClass("active");
+            }
+        });
+    </script>
 </body>
 
 </html>

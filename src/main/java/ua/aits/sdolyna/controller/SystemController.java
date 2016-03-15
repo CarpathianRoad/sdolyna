@@ -109,7 +109,7 @@ public class SystemController {
     	model.addObject("folder", folder);
     	model.addObject("folder_str", folder.replace('/', '|'));
     	model.addObject("category", temp.article_category);
-    	model.addObject("cat_name", Helpers.getCatName(id));
+    	model.addObject("cat_name", Helpers.getCatName(temp.article_category.toString()));
         model.addObject("article", temp);
         model.addObject("images", temp.article_images);
     	return model;
