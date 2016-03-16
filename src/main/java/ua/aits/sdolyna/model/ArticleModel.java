@@ -119,8 +119,8 @@ public class ArticleModel {
         while (result.next()) {
             ArticleModel article = new ArticleModel();
             article.setArticle_id(result.getInt("article_id"));
-            article.setArticle_title_ru(result.getString("article_title_ru"));
-            article.setArticle_title_en(result.getString("article_title_en"));
+            article.setArticle_title_ru(result.getString("article_title_ru").replaceAll("\"","&quot;"));
+            article.setArticle_title_en(result.getString("article_title_en").replaceAll("\"","&quot;"));
             article.setArticle_text_ru(result.getString("article_text_ru"));
             article.setArticle_text_en(result.getString("article_text_en"));
             article.setArticle_category(result.getInt("article_category"));
@@ -146,8 +146,8 @@ public class ArticleModel {
     	result.first();
             ArticleModel article = new ArticleModel();
             article.setArticle_id(result.getInt("article_id"));
-            article.setArticle_title_ru(result.getString("article_title_ru"));
-            article.setArticle_title_en(result.getString("article_title_en"));
+            article.setArticle_title_ru(result.getString("article_title_ru").replaceAll("\"","&quot;"));
+            article.setArticle_title_en(result.getString("article_title_en").replaceAll("\"","&quot;"));
             article.setArticle_text_ru(result.getString("article_text_ru"));
             article.setArticle_text_en(result.getString("article_text_en"));
             article.setArticle_category(result.getInt("article_category"));
@@ -172,8 +172,8 @@ public class ArticleModel {
     	result.first();
             ArticleModel article = new ArticleModel();
             article.setArticle_id(result.getInt("article_id"));
-            article.setArticle_title_ru(result.getString("article_title_"+lan.toLowerCase()));
-            article.setArticle_title_en(result.getString("article_title_en"));
+            article.setArticle_title_ru(result.getString("article_title_"+lan.toLowerCase()).replaceAll("\"","&quot;"));
+            article.setArticle_title_en(result.getString("article_title_en").replaceAll("\"","&quot;"));
             article.setArticle_text_ru(result.getString("article_text_"+lan.toLowerCase()));
             article.setArticle_text_en(result.getString("article_text_en"));
             article.setArticle_category(result.getInt("article_category"));
@@ -200,8 +200,8 @@ public class ArticleModel {
         while (result.next()) {
             ArticleModel article = new ArticleModel();
             article.setArticle_id(result.getInt("article_id"));
-            article.setArticle_title_ru(result.getString("article_title_"+lan.toLowerCase()));
-            article.setArticle_title_en(result.getString("article_title_en"));
+            article.setArticle_title_ru(result.getString("article_title_"+lan.toLowerCase()).replaceAll("\"","&quot;"));
+            article.setArticle_title_en(result.getString("article_title_en").replaceAll("\"","&quot;"));
             article.setArticle_text_ru(result.getString("article_text_"+lan.toLowerCase()));
             article.setArticle_text_en(result.getString("article_text_en"));
             article.setArticle_category(result.getInt("article_category"));
@@ -229,8 +229,8 @@ public class ArticleModel {
             GalleryModel imag = new GalleryModel();
             imag.setImage_id(result.getInt("image_id"));
             imag.setImage_url(result.getString("image_url"));
-            imag.setImage_title_ru(result.getString("image_title_ru"));
-            imag.setImage_title_en(result.getString("image_title_en"));
+            imag.setImage_title_ru(result.getString("image_title_ru").replaceAll("\"","&quot;"));
+            imag.setImage_title_en(result.getString("image_title_en").replaceAll("\"","&quot;"));
             imag.setImage_article_id(result.getInt("image_article_id"));
             items.add(imag);
         }
@@ -251,7 +251,7 @@ public class ArticleModel {
         
             String sql_insert = "";
             for(GalleryModel item : items) {
-                sql_insert += "('"+item.image_title_en+"','"+item.image_title_ru+"','"+item.image_url+"',"+item.image_article_id+"),";
+                sql_insert += "('"+StringEscapeUtils.escapeSql(item.image_title_en)+"','"+StringEscapeUtils.escapeSql(item.image_title_ru)+"','"+item.image_url+"',"+item.image_article_id+"),";
             }
             DB.runQuery("INSERT INTO `sdolyna_gallery` (`image_title_en`, `image_title_ru`, `image_url`, `image_article_id`) "
                     + "VALUES"+sql_insert.substring(0,sql_insert.length()-1)+";");

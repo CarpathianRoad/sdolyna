@@ -145,6 +145,8 @@ public class SystemController {
     	String category = request.getParameter("category");
         String files_data = request.getParameter("gallery-items");
     	String id = Articles.insertArticle(titleEN, titleRU, textEN, textRU, category, date, date_end);
+        if(files_data != "" && files_data != null) {
+            
         List<GalleryModel> items = new LinkedList<>();
         String[] itm = files_data.split("\\|");
         for(String i: itm) {
@@ -157,6 +159,7 @@ public class SystemController {
             items.add(imag);
         }
         Articles.insertGalImages(items);
+        }
     	return new ModelAndView("redirect:" + "/system/index/"+category);
     }
         
