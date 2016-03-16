@@ -188,13 +188,14 @@ public class SystemController {
         Articles.insertGalImages(items);
     	return new ModelAndView("redirect:" + "/system/index/"+category);
     }
-    /* @RequestMapping(value = {"/system/do/deleteproject/{id}","/system/do/deleteproject/{id}/"})
+    @RequestMapping(value = {"/system/delete/{id}","/system/delete/{id}/"})
     public ModelAndView deleteArticle(@PathVariable("id") String id, HttpServletRequest request, HttpServletResponse response) throws Exception {
     	request.setCharacterEncoding("UTF-8");
-    	return new ModelAndView("redirect:" + "/system/index/" + Projects.deleteProject(id));
+        ArticleModel temp = Articles.getArticleByID(id);
+        Articles.deleteArticle(id);
+    	return new ModelAndView("redirect:" + "/system/index/" + temp.article_category);
     }
         
-    File functions */
         
     @RequestMapping(value = {"/system/do/uploadimage", "/system/do/uploadimage/"}, method = RequestMethod.POST)
     public @ResponseBody String uploadImageHandler(@RequestParam("file") MultipartFile file, @RequestParam("path") String path,  HttpServletRequest request) {

@@ -131,7 +131,7 @@
     <script>
         $(document).ready(function () {
             var index = 6;
-            if('/Sdolyna/' === '/') { index = 5; }
+            if('${Constants.URL}' === '/') { index = 5; }
             var url = window.location.href.split('/')[index];
             console.log(url);
             if(url.indexOf("index") > -1) {

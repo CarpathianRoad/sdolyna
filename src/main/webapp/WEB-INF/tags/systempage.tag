@@ -56,6 +56,11 @@
                 <span>Фестивали</span>
             </a>
         </li>
+        <li id="category3">
+            <a href="${Constants.URL}system/index/3">
+                <span>Детские лагеря</span>
+            </a>
+        </li>
         <li id="index">
             <a href="${Constants.URL}system/index">
                 <span>Страны</span>
@@ -64,11 +69,6 @@
         <li style="display:none" id="category2">
             <a href="${Constants.URL}system/index/2">
                 <span>Другое</span>
-            </a>
-        </li>
-        <li id="category3">
-            <a href="${Constants.URL}system/index/3">
-                <span>Детские лагеря</span>
             </a>
         </li>
       </ul>

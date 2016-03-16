@@ -31,7 +31,9 @@
                                     	<th style="width:40%">Название</th>
                                     	<th class="text-center" style="width:10%">Языки</th>
                                     	<th style="width:3%;"></th>
-                                    	<th style="width:3%;"></th>
+                                        <c:if test="${category != '0'}">
+                                            <th style="width:3%;"></th>
+                                        </c:if>
                                 	</tr>
                             	</thead>
                             	<tbody>
@@ -45,7 +47,9 @@
                                                 <td>${item.article_title_ru}</td>
                                                 <td class="text-center">${item.article_lang}</td>
                                                 <td class="text-center"><a href="<c:url value="/system/edit/${item.article_id}"/>"><img class="article-buttons" src="${Constants.URL}img/edit.png" /></a></td>
-                                                <td class="text-center"><a href="<c:url value="/system/delete/${item.article_id}"/>"><img class="article-buttons" src="${Constants.URL}img/delete.png" /></a></td>
+                                                <c:if test="${category != '0'}">
+                                                    <td class="text-center"><a href="<c:url value="/system/delete/${item.article_id}"/>"><img class="article-buttons" src="${Constants.URL}img/delete.png" /></a></td>
+                                                </c:if>
                                             </tr>
                                     	<c:set var="count" value="${count + 1}" scope="page"/>
                                 	</c:forEach>

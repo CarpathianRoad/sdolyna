@@ -267,6 +267,12 @@ public class ArticleModel {
     	DB.closeCon();
     }
     
+    
+    public Boolean deleteArticle(String id) throws SQLException{
+        DB.runQuery("DELETE FROM `sdolyna_content` WHERE `article_id` = "+ id +";");
+            return true;
+    }
+    
     public void cleanGallery(String id) throws SQLException {
         DB.runQuery("DELETE FROM `sdolyna_gallery` WHERE `image_article_id` = "+id+";");
     	DB.closeCon();
