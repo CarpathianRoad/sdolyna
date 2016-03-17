@@ -10,10 +10,10 @@
 <t:indexpage>
 
 <link href="${Constants.URL}bx/jquery.bxslider.css" rel="stylesheet" />
-<section id="about" class="home-section">
+<section id="main" class="home-section">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-8 col-lg-offset-2">
+				<div class="center-block col-md-7" style="float: none;">
 					
 						<div class="section-heading text-center">
 						<div class="wow bounceInDown" data-wow-delay="0.2s">
@@ -27,10 +27,12 @@
 
 		<div class="container">
 			<div class="row ">	
-				<div class="col-md-12 main-text">
+				<div class="col-md-12 ">
+                                    <div class="main-text">
                                    ${article.article_text_ru} 
+                                    </div>
 				</div>		
-				<div id="gallery" class="gallery-items col-md-12 main-text">
+				<div id="gallery" class="gallery-items col-md-12">
                                     <div class="bxslider">
                                         <c:forEach items="${article.article_images}" var="image">
                                             <li><img class="show-image-gal" langru="${image.image_title_ru}" langen="${image.image_title_en}" src="${Constants.URL}${image.image_url}"/></li>
@@ -60,9 +62,10 @@
 		$(window).load(function(){
   $('.bxslider').bxSlider({
       adaptiveHeight: true,
+      adaptiveWidth: true,
   minSlides: 3,
   maxSlides: 4,
-  slideWidth: 250,
+  slideWidth: 300,
   slideMargin: 10
 });
  initModal();

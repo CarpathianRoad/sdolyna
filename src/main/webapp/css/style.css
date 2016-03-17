@@ -5,15 +5,31 @@
     font-family: Comunica;
     src: url(../fonts/COMUNICA_TYPE.ttf);
 }
+@font-face {
+    font-family: SdolFont;
+    src: url(../fonts/8545.ttf);
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Roboto-Italic';
+  src: url('../fonts/Roboto/Roboto-Italic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url('../fonts/Roboto/Roboto-Light.ttf') format('truetype');
+}
 body {
     width: 100%;
     height: 100%;
-	font-family: 'Open Sans', sans-serif;
+	font-family: Roboto, sans-serif;
 	font-weight: 400;
     color: #888;
 	font-size: 16px;
 	line-height: 1.6em;
-    background-color: #fff;
+    background-color: #F4EDF6;
 }
 
 html {
@@ -28,13 +44,13 @@ h4,
 h5,
 h6 {
     margin: 0 0 30px;
-    font-family: 'Varela Round', sans-serif;
+    font-family: Roboto, sans-serif;
     font-weight: 400;
     color: #444;
 }
 
 blockquote {
-	font-family: Georgia, arial, sans-serif;
+	font-family: Roboto, Georgia, arial, sans-serif;
 	color: #bbb;
 	font-size: 20px;
 }
@@ -117,11 +133,9 @@ img.img-responsive {
 	text-align: center;
 }
 .navbar-custom ul.nav li a {
-	font-size: 14px;
-	letter-spacing: 1px;
-    color: #444;
-	text-transform: uppercase;
-	font-weight: 700;
+	    font-size: 17px;
+            color: #585858;
+        padding-top: 10px;
 }
 
 
@@ -252,7 +266,7 @@ hr {
 ============================ */
 
 .home-section {
-    padding-top: 120px;
+    padding-top: 56px;
 	display:block;
     position:relative;
     z-index:120;
@@ -262,13 +276,29 @@ hr {
 	margin-bottom: 50px;
 }
 
+#main .section-heading h2 {
+    font-size: 35px;
+    margin-bottom: 10px;
+    line-height: 1em;
+    letter-spacing: 0.004em;
+    font-family: Roboto-Light;
+    margin-top: 12px;
+    font-style: italic;
+}
+
 .section-heading h2 {
-	font-size: 40px;
-	margin-bottom: 10px;
-	line-height: 1em;
+    font-size: 21px;
+    margin-bottom: 10px;
+    line-height: 1em;
+    letter-spacing: 0.004em;
+    font-family: Roboto-Light;
 }
 .section-heading i {
 	margin-bottom: 20px;
+}
+.section-heading h2 span {
+    font-family: SdolFont;
+    font-size: 35px;    margin-left: 5px;
 }
 
 
@@ -309,14 +339,15 @@ hr {
   height: 630px;
 }
 #intro.intro {
-	padding:30px 0 320px 30px
+	padding:29px 0 140px 15px;    
+        text-align: center;
 }
 
 .intro .slogan {
 
 }
 .intro .slogan img {
-  width: 300px;
+  width: 310px;
 }
 .intro .page-scroll {
 	 visibility: hidden;
@@ -435,8 +466,7 @@ form#contact-form input:focus,form#contact-form select:focus,form#contact-form t
 ============================ */
 
 footer {
-	text-align: center;
-	padding: 20px 0 0px;
+	    padding: 36px 0 0px;
 	
 }
 
@@ -458,9 +488,11 @@ Parallax
 ============================= */
 
 #separator {	
-	background-image: url(../img/parallax-bg.jpg);
-    padding-bottom: 50px;
-    padding-top: 50px;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    background-color: #fff;
+    color: #575757;
+    margin-top: 2px;
 }
 
 #separator .icon {
@@ -472,7 +504,6 @@ Parallax
 }
 
 #separator:after {	
-	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAEklEQVQImWNgYGD4z0AswK4SAFXuAf8EPy+xAAAAAElFTkSuQmCC);
 	content: "";
 	position: absolute;
 	bottom: 0;
@@ -483,11 +514,13 @@ Parallax
 	z-index: -1;
 }
 #separator .main-block {
-      float: none;
+float: none;
     margin: auto;
-    text-align: justify;
-    font-size: 18px;
-    color: #fff;
+    text-align: center;
+    font-size: 24px;
+    color: #575757;
+    line-height: 30px;
+    font-family: SdolFont;
 }
 /* ===========================
 --- Elements
@@ -691,13 +724,17 @@ form#contact-form input:focus,form#contact-form select:focus,form#contact-form t
 }
 
 footer {
-    background-color: #344F6D;
+    font-family: Roboto-Light;
+    background-color: #534B6B;
+    height: 211px;
+    color: #B1B0B4;
+    font-weight: 100;
 }
 
 .btn-skin {
   color: #fff;
-  background-color: #344F6D;
-  border-color: #344F6D;
+  background-color: #635293;
+    border-color: #635293;
 }
 
 .col-centered{
@@ -705,9 +742,11 @@ footer {
     margin: 0 auto;
 }
 .btn-contact {
-      display: block;
-    width: 200px;
-    margin: auto;
+    display: block;
+    width: 305px;
+    margin-top: 38px;
+    font-size: 20px;
+    padding-top: 7px;
 }
 #contact .lead a {
   color: #888;
@@ -748,7 +787,6 @@ footer {
 }
 .language-block ul li a {
   color: #344F6D;
-  font-weight: 700;
   letter-spacing: 1px;
   font-size:14px;
 }
@@ -770,11 +808,14 @@ footer {
     overflow: hidden;
   }
   #about .image-block {
-        margin-bottom: 50px;
-        width: 555px;
+            margin-bottom: 50px;
+    width: 602px;
+    height: 412px;
+    margin-left: -26px;    margin-top: 12px;
   }
   #about .image-block img {
-    width: 555px;
+        width: 612px;
+    height: 412px;
   }
   #doing {
       padding-top: 70px;
@@ -792,15 +833,20 @@ footer {
       display:none;
   }
   #countries {
-      padding-top: 50px;
-      padding-bottom: 50px;
+      padding-top: 63px;
+      padding-bottom: 35px;
   }
   .country-title {
-      text-align: center;
-      font-weight: 700;
-      color: #576D86;
-      font-size: 20px;
-      margin-bottom: 25px;
+    text-align: center;
+    font-weight: 100;
+    color: #575757;
+    font-size: 32px;
+    margin-bottom: 25px;
+    margin-top: 7px;
+    font-family: SdolFont;
+  }
+  .country-title a{
+      color: #575757;
   }
   #countries .image-block {
       height: 240px;
@@ -826,7 +872,7 @@ footer .enter-link img {
     padding-top: 50px;
 }
 #main table td img {
-        height: 30px;
+            height: 60px;
 }
 .festival-table {
     margin: auto;
@@ -835,37 +881,56 @@ footer .enter-link img {
 
 
 table.red-hr {
-font-family: "Lato","sans-serif";	}		/* added custom font-family  */
+font-family: Roboto-Light;	}		/* added custom font-family  */
 
 table.one.red-hr {									 
 margin-bottom: 3em;	
 border-collapse:collapse;	}	
 
-table.red-hr td {							/* removed the border from the table data rows  */
-text-align: center;     
+table.red-hr td {	
 width: 10em;					
-padding: 1em; 		}		
+padding: 1em; 		}
+table.red-hr td a {
+    margin-left: 33px;
+    font-size: 19px;
+    font-weight: 700;
+    color: #575757;
+}
 
 table.red-hr th {							  /* removed the border from the table heading row  */
-text-align: center;					
-padding: 1em;
-background-color: #e8503a;	     /* added a red background color to the heading cells  */
-color: white;		}			      /* added a white font color to the heading text */
+font-size: 22px;
+    font-family: Roboto-Light;
+    font-weight: 100;    text-align: center;
+    padding: 7px;
+    background-color: #695196;
+    color: white;	}			      /* added a white font color to the heading text */
 
 table.red-hr tr {	
 height: 1em;	}
 
-table.red-hr tr:nth-child(even) {		      /* added all even rows a #eee color  */
-       background-color: #eee;		}
-
-table.red-hr tr:nth-child(odd) {		     /* added all odd rows a #fff color  */
+table.red-hr tr {		     /* added all odd rows a #fff color  */
 background-color:#fff;		}
+table.red-hr td {		     /* added all odd rows a #fff color  */
+    line-height: 4 !important;
+    margin-bottom: 0px !Important;
+    padding: 0 !important;
+    vertical-align: bottom;
+}
 .main-text {
-        color: #000;
-        margin-bottom: 30px;
+    color: #000;
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 25px;
+    margin-top: -5px;
+    font-family: Roboto-Light;
+}
+.gallery-items {
+    padding: 17px;
+    margin-left: 5px;
 }
 .gallery-items img {
-    height: 140px;
+    height: 190px;
+    cursor: pointer;
 }
 #slider1 {
     height: 1%;
@@ -948,4 +1013,42 @@ background-color:#fff;		}
 }
 #showItems {
         margin-top: 50px;
+}
+.container {
+        padding-right: 5px;
+}
+.section-heading p.country-head {    
+    font-family: Roboto-Light;
+    margin-top: 3px;
+    font-size: 33px;
+    font-weight: 100;
+    color: #575757;
+    font-style: italic;
+}
+footer .adress-block {
+    font-weight: 100;
+    font-size: 18px;    line-height: 23px;
+}
+.adress-block a {
+        font-style: italic;
+}
+.adress-block p {
+        margin-top: 19px;
+    font-weight: 100;
+    font-size: 18px;
+}
+footer .contacts-block {
+    margin-left: -37px;
+    font-size: 17px;
+    line-height: 22px;
+}
+footer .contact-block {
+    margin-left: 42px;
+}
+footer .contact-block p {
+    font-weight: 100;
+    margin-top: 52px;
+    float: right;
+    margin-right: -80px;
+    font-size: 18px;    margin-bottom: 0;
 }

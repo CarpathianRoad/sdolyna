@@ -86,30 +86,83 @@
 	<!-- Section: about -->
     <jsp:doBody/>
         
+    <section id="contact" class="home-section text-center">
+		<div class="heading-contact">
+			<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-md-offset-2">
+					
+					<div class="section-heading">
+					<div class="wow bounceInDown" data-wow-delay="0.4s">
+					<h2>Свяжитесь с нами</h2>
+					</div>
+					<p class="wow lightSpeedIn" data-wow-delay="0.3s">Заполните эти поля и представители нашей компании свяжуться с вами</p>
+					</div>
+					
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="container">
+
+    <div class="row">
+        <div class="col-lg-8 col-md-offset-2">
+            <div class="form-wrapper marginbot-50">
+                <form id="contact-form">
+                <div class="row">
     
+                        <div class="form-group">
+                            <label for="name">
+                                Ваше имя</label>
+                            <input type="text" class="form-control" id="name" placeholder="Введите имя" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">
+                                Ваш Email </label>
+                                <input type="email" class="form-control" id="email" placeholder="Введите email" required="required" />
+                        </div>
+          
+             
+                        <div class="form-group">
+                            <label for="name">
+                                Сообщение</label>
+                            <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
+                                placeholder="Текст сообщения"></textarea>
+                        </div>
+       
+           
+                        <button type="submit" class="btn btn-skin btn-block" id="btnContactUs">
+                            Отправить</button>
+       
+                </div>
+                </form>
+				
+            </div>
+        </div>
+
+    </div>	
+
+		</div>
+	</section>
 	<footer>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12 col-lg-12">
-                                    
-			<div class="col-md-6 text-center">
-					<p class="lead"><i class="fa fa-phone"></i> Тел: +38 (0312) 44-30-54, 44-30-24, +380949183054</p>
-					<p class="lead"><i class="fa fa-envelope"></i> E-mail: <a href="mailto:sonyachna-dolyna@ukr.net">sonyachna-dolyna@ukr.net</a></p>
-			</div>
-                                    <div class="col-md-6 developed">
-                                        <p>  Developed by <a href="http://www.aits.ua/" target="_blank"><span class="reserved"> AITS</span></a>
+                            <div class="col-md-6 adress-block" style="margin-left: -21px;">
+                                Лицензия: <a target="_blank" href="${Cinstants.URL}img/lic.jpg">АЕ № 185710 выдана Государственным агентством Украины по туризму и курортам</a> <br/>
+                                <p>89313 Украина, Закарпатская область, Свалявский район, с. Поляна, ул. Курортная 10</p>
+                            </div>
+                            <div class="col-md-3 contacts-block">
+                                Тел: +38 (0312) 44-30-54, 44-30-24,<br/>
+                                Факс: +38 (0312) 44-30-24<br/> 
+                                Моб. тел.: +380949183054<br/>
+                                E-mail: <a href="mailto:sonyachna-dolyna@ukr.net">sonyachna-dolyna@ukr.net</a>
+                            </div>
+                            <div class="col-md-3 contact-block">
+                                <a href="#contact" id="show-contact" class="btn btn-skin btn-lg btn-scroll btn-contact">Связаться</a>
+                                <p>  Developed by <a href="http://www.aits.ua/" target="_blank"><span class="reserved"> AITS </span>2016</a>
                                          <a class="enter-link" href="${Constants.URL}system/login"><img src="${Constants.URL}img/enter-icon.png" alt=""/></a>
-                                        </p>
-                                       
-				
-                                    </div>
-                                        
-                                </div>
-                <!-- 
-                    All links in the footer should remain intact. 
-                    Licenseing information is available at: http://bootstraptaste.com/license/
-                    You can buy this theme without footer links online at: http://bootstraptaste.com/buy/?theme=Lonely
-                -->
+                                </p>
+                            </div>
 			</div>	
 		</div>
 	</footer>
@@ -140,6 +193,10 @@
             else {
                 $("#menu-item-"+url).addClass("active");
             }
+        });
+        $("#show-contact").click(function(){
+            $("#contact .heading-contact").toggle("slow");
+            $("#contact .form-wrapper").toggle("slow");
         });
     </script>
 </body>

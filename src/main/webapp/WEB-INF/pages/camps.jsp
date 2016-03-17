@@ -28,9 +28,9 @@
                                    <table class="table red-hr">
                                     <thead class="thead-inverse">
                                       <tr>
-                                        <th>Дата</th>
-                                        <th>Название</th>
-                                        <th>Галерея</th>
+                                        <th style="width:25%">Дата</th>
+                                        <th style="width:49%">Название</th>
+                                        <th  style="width:35%">Галерея</th>
                                       </tr>
                                     </thead>
                                     <tbody>
@@ -40,7 +40,7 @@
                                         <td><a href="${Constants.URL}${lan}/articles/full/${item.article_id}">${item.article_date} - ${item.article_date_end}</a></td>
                                         <td><a href="${Constants.URL}${lan}/articles/full/${item.article_id}">${item.article_title_ru}</a></td>
                                         <td><a href="${Constants.URL}${lan}/articles/full/${item.article_id}#gallery">
-                                            <c:forEach items="${item.article_images}" begin="0" end="2" var="image">
+                                            <c:forEach items="${item.article_images}" begin="0" end="1" var="image">
                                                 <img src="${Constants.URL}${image.image_url}"/>
                                             </c:forEach></a>
                                         </td>

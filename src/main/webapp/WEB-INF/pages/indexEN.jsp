@@ -14,6 +14,7 @@
     <title>Солнечная долина</title>
 
     <!-- CSS -->
+    <link href="${Constants.URL}img/favicon.png" rel="shortcut icon" type="image/x-icon" />
     <link href="${Constants.URL}css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="${Constants.URL}font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<link href="${Constants.URL}css/nivo-lightbox.css" rel="stylesheet" />
@@ -34,11 +35,11 @@
 	<!-- Section: intro -->
     <section id="intro" class="intro">
 <div id="maximage">
-	<a href="${Constants.URL}${lan}/articles/full/2"><img src="${Constants.URL}img/gallery/slovakia/3.jpg" alt=""  /></a>
-	<a href="${Constants.URL}${lan}/articles/full/5"><img src="${Constants.URL}img/gallery/croatia/1.jpg" alt=""  /></a>
-	<a href="${Constants.URL}${lan}/articles/full/6"><img src="${Constants.URL}img/gallery/greece/3.jpg" alt=""  /></a>
-	<a href="${Constants.URL}${lan}/articles/full/3"><img src="${Constants.URL}img/gallery/hungary/2.jpg" alt=""  /></a>
-	<a href="${Constants.URL}${lan}/articles/full/4"><img src="${Constants.URL}img/gallery/slovenia/2.jpg" alt=""  /></a>
+	<img src="${Constants.URL}img/gallery/slider/croatia.png" alt="2"  />
+	<img src="${Constants.URL}img/gallery/slider/greece.png" alt="2"  />
+	<img src="${Constants.URL}img/gallery/slider/hungary.png" alt="2"  />
+	<img src="${Constants.URL}img/gallery/slider/slovakia.png" alt="2"  />
+	<img src="${Constants.URL}img/gallery/slider/slovenia.png" alt="2"  />
 </div>
 		<div class="slogan">
 			<a href="index.html"><img src="${Constants.URL}img/logo.png" alt="" /></a>
@@ -102,8 +103,8 @@
 				<div class="col-lg-8 col-lg-offset-2">
 					
 						<div class="section-heading text-center">
-						<div class="wow bounceInDown" data-wow-delay="0.2s">
-							<h2>Солнечная долина</h2>
+						<div >
+                                                    <h2>Вас приветствует туристическая компания  <span>“Солнечная Долина”!</span></h2>
 						</div>
 						</div>
 					
@@ -114,30 +115,112 @@
 		<div class="container">
 			<div class="row page-scroll">	
 				<div class="col-md-6">
-					<div class="image-block"><img class="grow" src="${Constants.URL}img/gallery/sdolyna.jpg" class="img-responsive img-rounded" alt="" /></div>
+					<div class="image-block"><img class="grow" src="${Constants.URL}img/sdol.png" class="img-responsive img-rounded" alt="" /></div>
 				</div>
 				<div class="col-md-6">
 				<p>
-					<p style="text-align: center"><strong>Уважаемые друзья,<br/>
+					<p style="text-align: center;    margin-top: -5px;">Основными направлениями деятельности нашей фирмы являются:</p>
+					<p style="margin-left: 25px;
+    margin-top: -3px;
+    line-height: 21px;
+    font-size: 15px;">
+                                            - Отдых на морских курортах (Хорватия, Черногория, Турция, Египет);<br/>
 
-Вас приветствует туроператор «Туристическая компания «СОЛНЕЧНАЯ ДОЛИНА»»!</strong></p>
-					<p>
-					<a target="_blank" href="${Cinstants.URL}img/lic.jpg">Лицензия: АЕ № 185710 выдана Государственным агентством Украины по туризму и курортам</a> <br/>
+- Отдых на горнолыжных курортах (Украина - Карпаты, Словакия, Словения, Австрия);<br/>
 
-89313 Украина, Закарпатская область, Свалявский район,
+- Отдых в детских оздоровительных лагерях (Закарпатье, Словакия, Венгрия, Хорватия);<br/>
 
-с. Поляна, ул. Курортная 10<br/>
+- Отдых и лечение в санаториях (Украина - Закарпатье, Словакия, Чехия, Словения);<br/>
 
-Тел: +38 (0312) 44-30-54, 44-30-24,<br/>
-Факс: +38 (0312) 44-30-24<br/> 
-Моб. тел.: +380949183054<br/>
+- Организация экскурсионного обслуживания для индивидуальных туристов и групп (Украина - 
 
-E-mail: <a href="mailto:sonyachna-dolyna@ukr.net">sonyachna-dolyna@ukr.net</a>
-					</p>		<a href="#contact" id="show-contact" class="btn btn-skin btn-lg btn-scroll btn-contact">Связаться</a>		</div>	
+Закарпатье, Словакия, Венгрия, Австрия, Словения, Чехия, Хорватия);<br/>
+
+- Прием, размещение и экскурсионное обслуживание Ваших зарубежных партнеров и гостей;<br/>
+
+- Бронирование отелей на Украине и за рубежом;<br/>
+
+- Организация фестивалей, конференций и семинаров;<br/>
+
+- Транспортные услуги;<br/>
+
+- Продажа авиабилетов;<br/>
+
+- Все виды страхования.</p>		</div>	
 			</div>		
 		</div>
 	</section>
         
+	<!-- /Section: about -->
+	<section id="separator" class="home-section " >
+		
+		<div class="container">
+			<div class="row">
+					<div class="col-lg-10 main-block">
+						Начните путешествовать с нами, и Вы убедитесь, что наши туры качественны и увлекательны.<br/> Мы 
+
+приложим все усилия, чтобы Ваш отдых был максимально комфортным. Постоянно мы 
+
+предлагаем своим клиентам новые направления и новые программы. Звоните или пишите нам по 
+
+E-mail и Вы гарантированно получите тщательно продуманную и хорошо организованную 
+
+программу отдыха по разумной цене.
+					</div>
+					
+			</div>		
+		</div>
+	</section>
+	<section id="countries" class="home-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					
+						<div class="section-heading text-center">
+						<div class="wow bounceInDown" data-wow-delay="0.2s">
+							<p class="country-head">Страны</p>
+						</div>
+						</div>
+					
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+                                    <div class="image-block"><a href="${Constants.URL}${lan}/articles/full/1"><img class="grow img-responsive" src="${Constants.URL}img/gallery/countries/ukr.jpg" alt="" /></a></div>
+                                    <div class="country-title"><a href="${Constants.URL}${lan}/articles/full/1">Украина</a></div>
+                                </div>	
+				<div class="col-md-4">
+                                    <div class="image-block"><a href="${Constants.URL}${lan}/articles/full/2"><img class="grow img-responsive " src="${Constants.URL}img/gallery/countries/slovakia.jpg" alt="" /></a></div>
+                                    <div class="country-title"><a href="${Constants.URL}${lan}/articles/full/2">Словакия</a></div>
+                                </div>	
+				<div class="col-md-4">
+                                    <div class="image-block"><a href="${Constants.URL}${lan}/articles/full/3"><img class="grow img-responsive " src="${Constants.URL}img/gallery/countries/hun.jpg" alt="" /></a></div>
+                                    <div class="country-title"><a href="${Constants.URL}${lan}/articles/full/3">Венгрия</a></div>
+                                </div>	
+				<div class="col-md-4">
+                                    <div class="image-block"><a href="${Constants.URL}${lan}/articles/full/4"><img class="grow img-responsive" src="${Constants.URL}img/gallery/countries/slovenia.jpg" alt="" /></a></div>
+                                    <div class="country-title"><a href="${Constants.URL}${lan}/articles/full/4">Словения</a></div>
+                                </div>	
+				<div class="col-md-4">
+                                    <div class="image-block"><a href="${Constants.URL}${lan}/articles/full/5"><img class="grow img-responsive " src="${Constants.URL}img/gallery/countries/croatia.jpg" alt="" /></a></div>
+                                    <div class="country-title"><a href="${Constants.URL}${lan}/articles/full/5">Хорватия</a></div>
+                                </div>	
+				<div class="col-md-4">
+                                    <div class="image-block"><a href="${Constants.URL}${lan}/articles/full/6"><img class="grow img-responsive " src="${Constants.URL}img/gallery/countries/greece.jpg" alt="" /></a></div>
+                                    <div class="country-title"><a href="${Constants.URL}${lan}/articles/full/6">Греция</a></div>
+                                </div>	
+			</div>		
+		</div>
+	</section>
+	
+	<!-- /Section: services -->
+	
+
+	
+	<!-- /Section: contact -->
 
 	<!-- Section: contact -->
     <section id="contact" class="home-section text-center">
@@ -198,136 +281,25 @@ E-mail: <a href="mailto:sonyachna-dolyna@ukr.net">sonyachna-dolyna@ukr.net</a>
 
 		</div>
 	</section>
-	<!-- /Section: about -->
-	<section id="separator" class="home-section parallax " data-stellar-background-ratio="0.5" style="background-position: 0% -11.6875px;">
-		
-		<div class="container">
-			<div class="row">
-					<div class="col-lg-10 main-block">
-						Начните путешествовать с нами, и Вы убедитесь, что наши туры качественны и увлекательны. Мы 
-
-приложим все усилия, чтобы Ваш отдых был максимально комфортным. Постоянно мы 
-
-предлагаем своим клиентам новые направления и новые программы. Звоните или пишите нам по 
-
-E-mail и Вы гарантированно получите тщательно продуманную и хорошо организованную 
-
-программу отдыха по разумной цене.
-					</div>
-					
-			</div>		
-		</div>
-	</section>
-	<section id="doing" class="home-section">
-
-		<div class="container">
-			<div class="row">	
-				<div class="col-md-12">
-				
-					<p style=""><strong>Основными направлениями деятельности нашей фирмы являются:</strong><br/>
-
-- Отдых на морских курортах (Хорватия, Черногория, Турция, Египет);<br/>
-
-- Отдых на горнолыжных курортах (Украина - Карпаты, Словакия, Словения, Австрия);<br/>
-
-- Отдых в детских оздоровительных лагерях (Закарпатье, Словакия, Венгрия, Хорватия);<br/>
-
-- Отдых и лечение в санаториях (Украина - Закарпатье, Словакия, Чехия, Словения);<br/>
-
-- Организация экскурсионного обслуживания для индивидуальных туристов и групп (Украина - 
-
-Закарпатье, Словакия, Венгрия, Австрия, Словения, Чехия, Хорватия);<br/>
-
-- Прием, размещение и экскурсионное обслуживание Ваших зарубежных партнеров и гостей;<br/>
-
-- Бронирование отелей на Украине и за рубежом;<br/>
-
-- Организация фестивалей, конференций и семинаров;<br/>
-
-- Транспортные услуги;<br/>
-
-- Продажа авиабилетов;<br/>
-
-- Все виды страхования.</p>
-							
-				</div>
-			</div>		
-		</div>
-	</section>
-	<section id="countries" class="home-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-8 col-lg-offset-2">
-					
-						<div class="section-heading text-center">
-						<div class="wow bounceInDown" data-wow-delay="0.2s">
-							<h2>Страны</h2>
-						</div>
-						</div>
-					
-				</div>
-			</div>
-		</div>
-
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4">
-                                    <div class="image-block"><a href="${Constants.URL}${lan}/articles/full/1"><img class="grow img-responsive" src="${Constants.URL}img/gallery/ukraine.jpg" alt="" /></a></div>
-                                    <div class="country-title"><a href="${Constants.URL}${lan}/articles/full/1">Украина</a></div>
-                                </div>	
-				<div class="col-md-4">
-                                    <div class="image-block"><a href="${Constants.URL}${lan}/articles/full/2"><img class="grow img-responsive " src="${Constants.URL}img/gallery/slk.jpg" alt="" /></a></div>
-                                    <div class="country-title"><a href="${Constants.URL}${lan}/articles/full/2">Словакия</a></div>
-                                </div>	
-				<div class="col-md-4">
-                                    <div class="image-block"><a href="${Constants.URL}${lan}/articles/full/3"><img class="grow img-responsive " src="${Constants.URL}img/gallery/hu.jpg" alt="" /></a></div>
-                                    <div class="country-title"><a href="${Constants.URL}${lan}/articles/full/3">Венгрия</a></div>
-                                </div>	
-				<div class="col-md-4">
-                                    <div class="image-block"><a href="${Constants.URL}${lan}/articles/full/4"><img class="grow img-responsive" src="${Constants.URL}img/gallery/sl.jpg" alt="" /></a></div>
-                                    <div class="country-title"><a href="${Constants.URL}${lan}/articles/full/4">Словения</a></div>
-                                </div>	
-				<div class="col-md-4">
-                                    <div class="image-block"><a href="${Constants.URL}${lan}/articles/full/5"><img class="grow img-responsive " src="${Constants.URL}img/gallery/cr.jpg" alt="" /></a></div>
-                                    <div class="country-title"><a href="${Constants.URL}${lan}/articles/full/5">Хорватия</a></div>
-                                </div>	
-				<div class="col-md-4">
-                                    <div class="image-block"><a href="${Constants.URL}${lan}/articles/full/6"><img class="grow img-responsive " src="${Constants.URL}img/gallery/gr.jpg" alt="" /></a></div>
-                                    <div class="country-title"><a href="${Constants.URL}${lan}/articles/full/6">Греция</a></div>
-                                </div>	
-			</div>		
-		</div>
-	</section>
-	
-	<!-- /Section: services -->
-	
-
-	
-	<!-- /Section: contact -->
-
 	<footer>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12 col-lg-12">
-                                    
-			<div class="col-md-6 text-center">
-					<p class="lead"><i class="fa fa-phone"></i> Тел: +38 (0312) 44-30-54, 44-30-24, +380949183054</p>
-					<p class="lead"><i class="fa fa-envelope"></i> E-mail: <a href="mailto:sonyachna-dolyna@ukr.net">sonyachna-dolyna@ukr.net</a></p>
-			</div>
-                                    <div class="col-md-6 developed">
-                                        <p>  Developed by <a href="http://www.aits.ua/" target="_blank"><span class="reserved"> AITS</span></a>
+                            <div class="col-md-6 adress-block" style="margin-left: -21px;">
+                                Лицензия: <a target="_blank" href="${Cinstants.URL}img/lic.jpg">АЕ № 185710 выдана Государственным агентством Украины по туризму и курортам</a> <br/>
+                                <p>89313 Украина, Закарпатская область, Свалявский район, с. Поляна, ул. Курортная 10</p>
+                            </div>
+                            <div class="col-md-3 contacts-block">
+                                Тел: +38 (0312) 44-30-54, 44-30-24,<br/>
+                                Факс: +38 (0312) 44-30-24<br/> 
+                                Моб. тел.: +380949183054<br/>
+                                E-mail: <a href="mailto:sonyachna-dolyna@ukr.net">sonyachna-dolyna@ukr.net</a>
+                            </div>
+                            <div class="col-md-3 contact-block">
+                                <a href="#contact" id="show-contact" class="btn btn-skin btn-lg btn-scroll btn-contact">Связаться</a>
+                                <p>  Developed by <a href="http://www.aits.ua/" target="_blank"><span class="reserved"> AITS </span>2016</a>
                                          <a class="enter-link" href="${Constants.URL}system/login"><img src="${Constants.URL}img/enter-icon.png" alt=""/></a>
-                                        </p>
-                                       
-				
-                                    </div>
-                                        
-                                </div>
-                <!-- 
-                    All links in the footer should remain intact. 
-                    Licenseing information is available at: http://bootstraptaste.com/license/
-                    You can buy this theme without footer links online at: http://bootstraptaste.com/buy/?theme=Lonely
-                -->
+                                </p>
+                            </div>
 			</div>	
 		</div>
 	</footer>
@@ -350,6 +322,10 @@ E-mail и Вы гарантированно получите тщательно 
         $("#show-contact").click(function(){
             $("#contact .heading-contact").toggle("slow");
             $("#contact .form-wrapper").toggle("slow");
+        });
+        $("#maximage div").click(function(){
+            console.log("cs");
+            //window.location.href="${Constants.URL}${lan}/articles/full/"+$(this).attr("title");
         });
     </script>
 </body>

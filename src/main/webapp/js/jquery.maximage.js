@@ -405,7 +405,7 @@
 					var cycleOptions = $.extend({
 						fit:1,
 						containerResize:0,
-						height:"630px",
+						height:"425px",
 						width:$.Window.data('w'),
 						slideResize: false,
 						easing: ($.BrowserTests.cssTransitions && config.cssTransitions ? 'easeForCSSTransition' : 'swing')
