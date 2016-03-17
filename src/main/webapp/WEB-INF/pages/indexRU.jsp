@@ -297,7 +297,7 @@ E-mail и Вы гарантированно получите тщательно 
                             <div class="col-md-3 contact-block">
                                 <a href="#contact" id="show-contact" class="btn btn-skin btn-lg btn-scroll btn-contact">Связаться</a>
                                 <p>  Developed by <a href="http://www.aits.ua/" target="_blank"><span class="reserved"> AITS </span>2016</a>
-                                         <a class="enter-link" href="${Constants.URL}system/login"><img src="${Constants.URL}img/enter-icon.png" alt=""/></a>
+                                         <a class="enter-link" target="_blank" href="${Constants.URL}system/login"><img src="${Constants.URL}img/enter-icon.png" alt=""/></a>
                                 </p>
                             </div>
 			</div>	
