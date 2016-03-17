@@ -20,6 +20,7 @@
     <title>Солнечная долина</title>
 
     <!-- CSS -->
+    <link href="${Constants.URL}img/favicon.png" rel="shortcut icon" type="image/x-icon" />
     <link href="${Constants.URL}css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="${Constants.URL}font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<link href="${Constants.URL}css/nivo-lightbox.css" rel="stylesheet" />
