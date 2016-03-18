@@ -176,6 +176,8 @@ public class SystemController {
         String date_end = request.getParameter("act-date");
     	String category = request.getParameter("category");
         String files_data = request.getParameter("gallery-items");
+        if(files_data != "" && files_data != null) { 
+        
     	List<GalleryModel> items = new LinkedList<>();
         String[] itm = files_data.split("\\|");
         for(String i: itm) {
@@ -190,6 +192,7 @@ public class SystemController {
         Articles.cleanGallery(id);
     	Articles.updateArticle(id, titleEN, titleRU, textEN, textRU, category, date, date_end);
         Articles.insertGalImages(items);
+        }
     	return new ModelAndView("redirect:" + "/system/index/"+category);
     }
     @RequestMapping(value = {"/system/delete/{id}","/system/delete/{id}/"})
