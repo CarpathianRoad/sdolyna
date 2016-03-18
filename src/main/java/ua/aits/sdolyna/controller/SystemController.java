@@ -193,6 +193,9 @@ public class SystemController {
     	Articles.updateArticle(id, titleEN, titleRU, textEN, textRU, category, date, date_end);
         Articles.insertGalImages(items);
         }
+        else {
+            Articles.cleanGallery(id);
+        }
     	return new ModelAndView("redirect:" + "/system/index/"+category);
     }
     @RequestMapping(value = {"/system/delete/{id}","/system/delete/{id}/"})
