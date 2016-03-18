@@ -178,7 +178,7 @@ E-mail и Вы гарантированно получите тщательно 
 					
 						<div class="section-heading text-center">
 						<div class="wow bounceInDown" data-wow-delay="0.2s">
-							<p class="country-head">Страны</p>
+							<p class="country-head">Направления для отдыха</p>
 						</div>
 						</div>
 					
@@ -286,10 +286,10 @@ E-mail и Вы гарантированно получите тщательно 
 			<div class="row">
                             <div class="col-md-6 adress-block">
                                 Лицензия: <a target="_blank" href="${Constants.URL}img/lic.jpg">АЕ № 185710 выдана Государственным агентством Украины по туризму и курортам</a> <br/>
-                                <p>89313 Украина, Закарпатская область, Свалявский район, с. Поляна, ул. Курортная 10</p>
+                                <p>89313 Украина, Закарпатская область, Свалявский район, <br/>с. Поляна, ул. Курортная 10</p>
                             </div>
                             <div class="col-md-3 contacts-block">
-                                Тел: +38 (0312) 44-30-54, 44-30-24,<br/>
+                                <span style="letter-spacing: -1px;">Тел: +38 (0312) 44-30-54, 44-30-24,</span><br/>
                                 Факс: +38 (0312) 44-30-24<br/> 
                                 Моб. тел.: +380949183054<br/>
                                 E-mail: <a href="mailto:sonyachna-dolyna@ukr.net">sonyachna-dolyna@ukr.net</a>

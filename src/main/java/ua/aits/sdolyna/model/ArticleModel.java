@@ -133,7 +133,9 @@ public class ArticleModel {
             if(!"".equals(article.article_title_en)) {
                 langs+= "EN,";
             }
-            article.setArticle_lang(langs.substring(0, langs.length()-1));
+            if(langs != "") {
+                article.setArticle_lang(langs.substring(0, langs.length()-1));
+            }
             article.setArticle_images(this.fillImages(article.article_id.toString()));
             articles.add(article);
         }
@@ -160,7 +162,9 @@ public class ArticleModel {
             if(!"".equals(article.article_title_en)) {
                 langs+= "EN,";
             }
-            article.setArticle_lang(langs.substring(0, langs.length()-1));
+            if(langs != "") {
+                article.setArticle_lang(langs.substring(0, langs.length()-1));
+            }
             article.setArticle_images(this.fillImages(article.article_id.toString()));
         
         DB.closeCon();
@@ -181,10 +185,10 @@ public class ArticleModel {
             article.setArticle_date_end(result.getString("article_date_end"));
             String langs = "";
             if(article.article_title_ru == "" || article.article_title_ru == null) {
-                article.setArticle_title_ru(result.getString("article_title_ru").replaceAll("\"","&quot;"));
+                article.setArticle_title_ru("");
             }
             if(article.article_text_ru == "" || article.article_text_ru == null) {
-                article.setArticle_text_ru(result.getString("article_text_ru"));
+                article.setArticle_text_ru("");
             }
             if(!"".equals(article.article_title_ru)) {
                 langs+= "RU,";
@@ -192,7 +196,9 @@ public class ArticleModel {
             if(!"".equals(article.article_title_en)) {
                 langs+= "EN,";
             }
-            article.setArticle_lang(langs.substring(0, langs.length()-1));
+            if(langs != "") {
+                article.setArticle_lang(langs.substring(0, langs.length()-1));
+            }
             article.setArticle_images(this.fillImages(article.article_id.toString()));
         
         DB.closeCon();
@@ -220,9 +226,13 @@ public class ArticleModel {
             if(!"".equals(article.article_title_en)) {
                 langs+= "EN,";
             }
-            article.setArticle_lang(langs.substring(0, langs.length()-1));
+            if(langs != "") { 
+                article.setArticle_lang(langs.substring(0, langs.length()-1));
+            }
             article.setArticle_images(this.fillImages(article.article_id.toString()));
-            articles.add(article);
+            if(!"".equals(article.article_title_ru)) {
+                articles.add(article);
+            }
         }
         DB.closeCon();
         return articles;

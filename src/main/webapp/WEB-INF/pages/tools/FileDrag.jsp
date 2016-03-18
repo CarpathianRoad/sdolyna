@@ -50,7 +50,18 @@
             	init: function () {
 	this.on("complete", function (file) {
   	if (this.getUploadingFiles().length === 0 && this.getQueuedFiles().length === 0) {
-    	completeAjaxCall("${folder}/images/"+$(".dz-filename span").html());
+        jQuery.ajax({
+            url: '${Constants.URL}getlastfileinfolder',
+            cache: false,
+            contentType: false,
+            processData: false,
+            type: 'GET',
+            data: 'path=${folder}/images',
+            success: function(data){
+                console.log(data);
+                completeAjaxCall("${folder}/images/"+data);
+            }
+        });
   	}
 	});
   }

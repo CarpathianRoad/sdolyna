@@ -18,6 +18,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import org.apache.commons.io.FilenameUtils;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -202,8 +203,9 @@ public class SystemController {
         
     @RequestMapping(value = {"/system/do/uploadimage", "/system/do/uploadimage/"}, method = RequestMethod.POST)
     public @ResponseBody String uploadImageHandler(@RequestParam("file") MultipartFile file, @RequestParam("path") String path,  HttpServletRequest request) {
-    	String name = file.getOriginalFilename();
-        name = TransliteratorClass.transliterate(name);
+    	Integer curent = Integer.parseInt(Helpers.lastFileModified(Constants.home+path).getName().split("\\.")[0]) + 1;
+                String ext = file.getOriginalFilename().split("\\.")[1];
+                String name = curent.toString()+"."+ext;
     	if (!file.isEmpty()) {
             try {
                 byte[] bytes = file.getBytes();
@@ -214,7 +216,7 @@ public class SystemController {
             	try (BufferedOutputStream stream = new BufferedOutputStream( new FileOutputStream(serverFile))) {
                 	stream.write(bytes);
             	}
-            	return "";
+            	return name;
             } catch (Exception e) {
             	return "You failed to upload " + name + " => " + e.getMessage();
             }
@@ -223,9 +225,15 @@ public class SystemController {
     	}
     }
     
+    @RequestMapping(value = {"/getlastfileinfolder"}, method = RequestMethod.GET)
+    public @ResponseBody String getLastFile(@RequestParam("path") String path,  HttpServletRequest request) {
+    	return Helpers.lastFileModified(Constants.home+path).getName();
+    }
     @RequestMapping(value = {"/system/do/uploadfile", "/system/do/uploadfile/"}, method = RequestMethod.POST)
     public @ResponseBody String uploadFileHandler(@RequestParam("file") MultipartFile file, @RequestParam("path") String path,  HttpServletRequest request) {
-    	String name = file.getOriginalFilename();
+    	Integer curent = Integer.parseInt(Helpers.lastFileModified(Constants.home+path).getName().split("\\.")[0]) + 1;
+                String ext = file.getOriginalFilename().split("\\.")[1];
+                String name = curent.toString()+"."+ext;
     	if (!file.isEmpty()) {
         	try {
             	byte[] bytes = file.getBytes();
@@ -255,8 +263,9 @@ public class SystemController {
     @RequestMapping(value = "/uploadFile", method = RequestMethod.POST)
     public @ResponseBody
     String uploadFileHandlerFull(@RequestParam("upload") MultipartFile file, @RequestParam("path") String path,  HttpServletRequest request) {
-        
-                String name = file.getOriginalFilename();
+                Integer curent = Integer.parseInt(Helpers.lastFileModified(Constants.home+path).getName().split("\\.")[0]) + 1;
+                String ext = file.getOriginalFilename().split("\\.")[1];
+                String name = curent.toString()+"."+ext;
         if (!file.isEmpty()) {
             try {
                 byte[] bytes = file.getBytes();

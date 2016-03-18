@@ -65,8 +65,8 @@
                                                           
 		<div class="language-block">
 			<ul>
-				<li class="active"><a href="${Constants.URL}${fullURLRU}">RU</a></li>
-				<li><a href="${Constants.URL}${fullURLEN}">EN</a></li>
+				<li id="ru-lan" class="${activeru}"><a href="${Constants.URL}${fullURLRU}">RU</a></li>
+				<li id="en-lan" class="${activeen}"><a href="${Constants.URL}${fullURLEN}">EN</a></li>
 			</ul>
 		</div>
                                                       </div>
@@ -150,10 +150,10 @@
 			<div class="row">
                             <div class="col-md-6 adress-block">
                                 Лицензия: <a target="_blank" href="${Constants.URL}img/lic.jpg">АЕ № 185710 выдана Государственным агентством Украины по туризму и курортам</a> <br/>
-                                <p>89313 Украина, Закарпатская область, Свалявский район, с. Поляна, ул. Курортная 10</p>
+                                <p>89313 Украина, Закарпатская область, Свалявский район, <br/>с. Поляна, ул. Курортная 10</p>
                             </div>
                             <div class="col-md-3 contacts-block">
-                                Тел: +38 (0312) 44-30-54, 44-30-24,<br/>
+                                <span style="letter-spacing: -1px;">Тел: +38 (0312) 44-30-54, 44-30-24,</span><br/>
                                 Факс: +38 (0312) 44-30-24<br/> 
                                 Моб. тел.: +380949183054<br/>
                                 E-mail: <a href="mailto:sonyachna-dolyna@ukr.net">sonyachna-dolyna@ukr.net</a>
@@ -161,7 +161,7 @@
                             <div class="col-md-3 contact-block">
                                 <a href="#contact" id="show-contact" class="btn btn-skin btn-lg btn-scroll btn-contact">Связаться</a>
                                 <p>  Developed by <a href="http://www.aits.ua/" target="_blank"><span class="reserved"> AITS </span>2016</a>
-                                    <a class="enter-link" target="_blank" href="${Constants.URL}system/login"><img src="${Constants.URL}img/enter-icon.png" alt=""/></a>
+                                         <a class="enter-link" target="_blank" href="${Constants.URL}system/login"><img src="${Constants.URL}img/enter-icon.png" alt=""/></a>
                                 </p>
                             </div>
 			</div>	
@@ -194,6 +194,7 @@
             else {
                 $("#menu-item-"+url).addClass("active");
             }
+            $("#${lan}-lan").addClass("active");
         });
         $("#show-contact").click(function(){
             $("#contact .heading-contact").toggle("slow");
