@@ -180,6 +180,12 @@ public class ArticleModel {
             article.setArticle_date(result.getString("article_date"));
             article.setArticle_date_end(result.getString("article_date_end"));
             String langs = "";
+            if(article.article_title_ru == "" || article.article_title_ru == null) {
+                article.setArticle_title_ru(result.getString("article_title_ru").replaceAll("\"","&quot;"));
+            }
+            if(article.article_text_ru == "" || article.article_text_ru == null) {
+                article.setArticle_text_ru(result.getString("article_text_ru"));
+            }
             if(!"".equals(article.article_title_ru)) {
                 langs+= "RU,";
             }
