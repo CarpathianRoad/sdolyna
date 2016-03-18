@@ -65,8 +65,8 @@
                                                           
 		<div class="language-block">
 			<ul>
-				<li class="active"><a href="${Constants.URL}ru/index">RU</a></li>
-				<li><a href="${Constants.URL}en/index">EN</a></li>
+				<li class="active"><a href="${Constants.URL}${fullURLRU}">RU</a></li>
+				<li><a href="${Constants.URL}${fullURLEN}">EN</a></li>
 			</ul>
 		</div>
                                                       </div>

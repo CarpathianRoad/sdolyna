@@ -285,7 +285,7 @@ E-mail и Вы гарантированно получите тщательно 
 		<div class="container">
 			<div class="row">
                             <div class="col-md-6 adress-block" style="margin-left: -21px;">
-                                Лицензия: <a target="_blank" href="${Cinstants.URL}img/lic.jpg">АЕ № 185710 выдана Государственным агентством Украины по туризму и курортам</a> <br/>
+                                Лицензия: <a target="_blank" href="${Constants.URL}img/lic.jpg">АЕ № 185710 выдана Государственным агентством Украины по туризму и курортам</a> <br/>
                                 <p>89313 Украина, Закарпатская область, Свалявский район, с. Поляна, ул. Курортная 10</p>
                             </div>
                             <div class="col-md-3 contacts-block">

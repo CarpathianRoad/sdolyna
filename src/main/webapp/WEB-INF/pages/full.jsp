@@ -31,14 +31,17 @@
                                     <div class="main-text">
                                    ${article.article_text_ru} 
                                     </div>
-				</div>		
+				</div>	
+                                <c:if test="${not empty article.article_images}">
+                                    
 				<div id="gallery" class="gallery-items col-md-12">
                                     <div class="bxslider">
                                         <c:forEach items="${article.article_images}" var="image">
                                             <li><img class="show-image-gal" langru="${image.image_title_ru}" langen="${image.image_title_en}" src="${Constants.URL}${image.image_url}"/></li>
                                         </c:forEach>
-</div>
+                                    </div>
 				</div>	
+                                </c:if>
 		</div>
                 </div>
 	</section>

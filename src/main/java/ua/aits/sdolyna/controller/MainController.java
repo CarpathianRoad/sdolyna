@@ -52,6 +52,8 @@ public class MainController {
         ModelAndView model = new ModelAndView("full");
         model.addObject("article", Articles.getArticleByIDAndLan(id, lan));
         model.addObject("lan", lan);
+        model.addObject("fullURLEN","en/articles/full/"+id);
+        model.addObject("fullURLRU","ru/articles/full/"+id);
         return model;
     }
     
@@ -60,6 +62,8 @@ public class MainController {
         ModelAndView model = new ModelAndView("festivals");
         model.addObject("festivals", Articles.getArticlesByTypeAndLan("1", lan));
         model.addObject("lan", lan);
+        model.addObject("fullURLEN","en/articles/festivals");
+        model.addObject("fullURLRU","ru/articles/festivals");
         return model;
     }
     @RequestMapping(value = {"/{lan}/articles/camps"}, method = RequestMethod.GET)
@@ -67,6 +71,8 @@ public class MainController {
         ModelAndView model = new ModelAndView("camps");
         model.addObject("camps", Articles.getArticlesByTypeAndLan("3", lan));
         model.addObject("lan", lan);
+        model.addObject("fullURLEN","en/articles/camps");
+        model.addObject("fullURLRU","ru/articles/camps");
         return model;
     }
 }
