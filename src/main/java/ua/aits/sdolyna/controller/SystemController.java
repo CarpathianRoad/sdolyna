@@ -189,13 +189,15 @@ public class SystemController {
             imag.setImage_article_id(Integer.parseInt(id));
             items.add(imag);
         }
+        
         Articles.cleanGallery(id);
-    	Articles.updateArticle(id, titleEN, titleRU, textEN, textRU, category, date, date_end);
         Articles.insertGalImages(items);
         }
         else {
             Articles.cleanGallery(id);
         }
+        
+    	Articles.updateArticle(id, titleEN, titleRU, textEN, textRU, category, date, date_end);
     	return new ModelAndView("redirect:" + "/system/index/"+category);
     }
     @RequestMapping(value = {"/system/delete/{id}","/system/delete/{id}/"})

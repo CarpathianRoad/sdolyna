@@ -840,7 +840,7 @@ footer .enter-link img {
     padding-top: 50px;
 }
 #main table td img {
-            height: 60px;
+            height: 60px;    margin-top: 10px;
 }
 .festival-table {
     margin: auto;
@@ -862,7 +862,8 @@ table.red-hr td a {
     margin-left: 33px;
     font-size: 19px;
     font-weight: 700;
-    color: #575757;
+    color: #575757;    display: block;
+    line-height: 40px;
 }
 
 table.red-hr th {							  /* removed the border from the table heading row  */
