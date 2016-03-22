@@ -694,7 +694,7 @@ form#contact-form input:focus,form#contact-form select:focus,form#contact-form t
 footer {
     font-family: Roboto-Light;
     background-color: #534B6B;
-    height: 211px;
+    height: 300px;
     color: #B1B0B4;
     font-weight: 100;
 }
@@ -1007,11 +1007,16 @@ footer .adress-block {
     font-weight: 100;
     font-size: 18px;
 }
-.adress-block p.facebook {
+.contact-block p.facebook {
     margin-bottom: 0px;
+    float: left;
 }
 #minfin-informer-m1Fn-calc {
-    display: none;
+    margin-left: 60px;
+    margin-bottom: 30px;
+}
+#gsInformerID-f1Lj8tpnLR5ndS {
+    margin-left: 66px;
 }
 footer .contacts-block {
     margin-left: -37px;
@@ -1025,8 +1030,8 @@ footer .contact-block p {
     font-weight: 100;
     margin-top: 52px;
     float: right;
-    margin-right: -80px;
-    font-size: 18px;    margin-bottom: 0;
+    margin-right: -40px;
+    font-size: 15px;    margin-bottom: 0;
 }
 /* Media queries */
 

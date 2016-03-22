@@ -286,7 +286,7 @@ E-mail и Вы гарантированно получите тщательно 
 					<div class="text-block-contacts-loading">
 						<div class="main-text-block">
 							
-    <section id="contact" class="home-section text-center">
+     <section id="contact" class="home-section text-center">
 		<div class="heading-contact">
 			<div class="container">
 			<div class="row">
@@ -347,19 +347,8 @@ E-mail и Вы гарантированно получите тщательно 
 				<div id="mail-complete" class="side-block right-block">
 					<div class="text-block-contacts-loading">
 						<div class="main-text-block">
-							Ваш лист відправлено. <br/>
-							Зачекайте хвилинку.<br/>
-							<img class="loading-gif" src="${Constants.URL}img/loading-x.gif" />
-						</div>
-					</div>
-				</div>		
-            </div>
-        </div>
-
-    </div>	
-
-		</div>
-	</section>
+							Ваше письмо отправлено <br/>
+							Подождите минуту.<br/>
 							<img class="loading-gif" src="${Constants.URL}img/loading-x.gif" />
 						</div>
 					</div>

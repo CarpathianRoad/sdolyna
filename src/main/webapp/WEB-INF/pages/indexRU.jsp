@@ -177,7 +177,7 @@ E-mail и Вы гарантированно получите тщательно 
 				<div class="col-lg-8 col-lg-offset-2">
 					
 						<div class="section-heading text-center">
-						<div class="wow bounceInDown" data-wow-delay="0.2s">
+						<div class="" >
 							<p class="country-head">Направления для отдыха</p>
 						</div>
 						</div>
@@ -223,7 +223,7 @@ E-mail и Вы гарантированно получите тщательно 
 	<!-- /Section: contact -->
 
 	<!-- Section: contact -->
-    <section id="contact" class="home-section text-center">
+     <section id="contact" class="home-section text-center">
 		<div class="heading-contact">
 			<div class="container">
 			<div class="row">
@@ -284,81 +284,8 @@ E-mail и Вы гарантированно получите тщательно 
 				<div id="mail-complete" class="side-block right-block">
 					<div class="text-block-contacts-loading">
 						<div class="main-text-block">
-							
-    <section id="contact" class="home-section text-center">
-		<div class="heading-contact">
-			<div class="container">
-			<div class="row">
-				<div class="col-lg-8 col-md-offset-2">
-					
-					<div class="section-heading">
-					<div class="wow bounceInDown" data-wow-delay="0.4s">
-					<h2>Свяжитесь с нами</h2>
-					</div>
-					<p class="wow lightSpeedIn" data-wow-delay="0.3s">Заполните эти поля и представители нашей компании свяжуться с вами</p>
-					</div>
-					
-				</div>
-			</div>
-			</div>
-		</div>
-		<div class="container">
-
-    <div class="row">
-        <div class="col-lg-8 col-md-offset-2">
-            <div class="form-wrapper marginbot-50">
-                <form id="contact-form">
-                <div class="row">
-    
-                        <div class="form-group">
-                            <label for="name">
-                                Ваше имя</label>
-                            <input type="text" class="form-control" id="name" placeholder="Введите имя" required="required" />
-                        </div>
-                        <div class="form-group">
-                            <label for="email">
-                                Ваш Email </label>
-                                <input type="email" class="form-control" id="email" placeholder="Введите email" required="required" />
-                        </div>
-          
-             
-                        <div class="form-group">
-                            <label for="name">
-                                Сообщение</label>
-                            <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
-                                placeholder="Текст сообщения"></textarea>
-                        </div>
-       
-           
-                        <button type="submit" class="btn btn-skin btn-block" id="btnContactUs">
-                            Отправить</button>
-                    <div class="validation"></div>
-       
-                </div>
-                </form>
-		<div id="mail-loading" class="side-block right-block">
-					<div class="text-block-contacts-loading">
-						<div class="main-text-block">
-							<img class="loading-gif" src="${Constants.URL}img/loading-x.gif" />
-						</div>
-					</div>
-				</div>
-				<div id="mail-complete" class="side-block right-block">
-					<div class="text-block-contacts-loading">
-						<div class="main-text-block">
-							Ваш лист відправлено. <br/>
-							Зачекайте хвилинку.<br/>
-							<img class="loading-gif" src="${Constants.URL}img/loading-x.gif" />
-						</div>
-					</div>
-				</div>		
-            </div>
-        </div>
-
-    </div>	
-
-		</div>
-	</section>
+							Ваше письмо отправлено <br/>
+							Подождите минуту.<br/>
 							<img class="loading-gif" src="${Constants.URL}img/loading-x.gif" />
 						</div>
 					</div>
@@ -374,13 +301,17 @@ E-mail и Вы гарантированно получите тщательно 
 		<div class="container">
 			<div class="row">
                             <div class="col-md-6 adress-block">
-                                Лицензия: <a target="_blank" href="${Constants.URL}img/lic.jpg">АЕ № 185710 выдана Государственным агентством Украины по туризму и курортам</a> <br/>
+                                Лицензия: <a target="_blank" href="${Constants.URL}img/lic.jpg">АЕ № 185710 выдана Государственным агентством Украины по туризму и курортам <img src="${Constants.URL}img/pdf.png" alt="PDF"></a> <br/>
                                 <p>89313 Украина, Закарпатская область, Свалявский район, <br/>с. Поляна, ул. Курортная 10</p>
-                                <p class="facebook">
-                                    <a href="https://www.facebook.com/sunvalley2014" target="_blank">
-                                        <img src="${Constants.URL}img/icon_fb.png" alt="Facebook">
-                                    </a>
-                                </p>
+                                
+                                <span style="letter-spacing: -1px;">Тел: +38 (0312) 44-30-54, 44-30-24,</span><br/>
+                                Факс: +38 (0312) 44-30-24<br/> 
+                                Моб. тел.: +380949183054<br/>
+                                E-mail: <a href="mailto:sonyachna-dolyna@ukr.net">sonyachna-dolyna@ukr.net</a>
+
+                            </div>
+                            <div class="col-md-3 contacts-block">
+                                
                                 <!-- Minfin.com.ua calc informer 200x112 violet-->
                                 <div id="minfin-informer-m1Fn-calc">
                                     Загружаем 
@@ -392,16 +323,37 @@ E-mail и Вы гарантированно получите тщательно 
                                 <noscript>
                                     <img src="http://informer.minfin.com.ua/gen/img.png" width="1" height="1" alt="minfin.com.ua: курсы валют" title="Курс валют" border="0" />
                                 </noscript>
-
-                            </div>
-                            <div class="col-md-3 contacts-block">
-                                <span style="letter-spacing: -1px;">Тел: +38 (0312) 44-30-54, 44-30-24,</span><br/>
-                                Факс: +38 (0312) 44-30-24<br/> 
-                                Моб. тел.: +380949183054<br/>
-                                E-mail: <a href="mailto:sonyachna-dolyna@ukr.net">sonyachna-dolyna@ukr.net</a>
+                                <link rel="stylesheet" type="text/css" href="https://s1.gismeteo.ua/static/css/informer2/gs_informerClient.min.css">
+<div id="gsInformerID-f1Lj8tpnLR5ndS" class="gsInformer" style="width:186px;height:69px">
+  <div class="gsIContent">
+   <div id="cityLink">
+     <a href="https://www.gismeteo.ua/weather-mukacheve-4960/" target="_blank">Погода в Мукачево</a>
+   </div>
+   <div class="gsLinks">
+     <table>
+       <tr>
+         <td>
+           <div class="leftCol">
+             <a href="https://www.gismeteo.ua" target="_blank">
+              
+               
+             </a>
+           </div>
+           </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+<script src="https://www.gismeteo.ua/ajax/getInformer/?hash=f1Lj8tpnLR5ndS" type="text/javascript"></script>
                             </div>
                             <div class="col-md-3 contact-block">
                                 <a href="#contact" id="show-contact" class="btn btn-skin btn-lg btn-scroll btn-contact">Связаться</a>
+                                <p class="facebook">
+                                    <a href="https://www.facebook.com/sunvalley2014" target="_blank">
+                                        <img src="${Constants.URL}img/icon_fb.png" alt="Facebook">
+                                    </a>
+                                </p>
                                 <p>  Developed by <a href="http://www.aits.ua/" target="_blank"><span class="reserved"> AITS </span>2016</a>
                                          <a class="enter-link" target="_blank" href="${Constants.URL}system/login"><img src="${Constants.URL}img/enter-icon.png" alt=""/></a>
                                 </p>

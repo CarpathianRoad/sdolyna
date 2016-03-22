@@ -56,8 +56,8 @@
                                                       <!-- Collect the nav links, forms, and other content for toggling -->
                                                       <div class="collapse navbar-collapse" id="menu">
                                                             <ul class="nav navbar-nav">
-                                                                  <li><a href="${Constants.URL}${lan}/index#about">Про компанию</a></li>
-                                                                  <li><a href="${Constants.URL}${lan}/index#countries">Страны</a></li>
+                                                                  <li><a href="${Constants.URL}${lan}/index">Про компанию</a></li>
+                                                                  <li><a href="${Constants.URL}${lan}/index#about">Страны</a></li>
                                                                   <li id="menu-item-festivals"><a href="${Constants.URL}${lan}/articles/festivals">Фестивали</a></li>
                                                                   <li id="menu-item-camps"><a href="${Constants.URL}${lan}/articles/camps">Детские лагеря</a></li>
 
