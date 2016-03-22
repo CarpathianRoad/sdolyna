@@ -862,7 +862,7 @@ table.red-hr td a {
     margin-left: 33px;
     font-size: 19px;
     font-weight: 700;
-    color: #575757;    display: block;
+    color: #575757; 
     line-height: 40px;
 }
 
@@ -1035,6 +1035,23 @@ footer .contact-block p {
 }
 /* Media queries */
 
+#mobile-content {
+    display: none;
+    background-color: #fff;
+    padding: 5px;
+}
+#mobile-content ul {
+    list-style: none;
+    padding-left: 20px;
+}
+#mobile-content ul li a:hover {
+    color: #344F6D;
+    text-decoration: underline;
+}
+#mobile-content ul li a {
+        font-size: 19px;
+}
+
 @media (max-width:768px) {
 	.navbar-header .fa {
 		color: #666;
@@ -1098,6 +1115,12 @@ footer .contact-block p {
         }
         .gallery-items img {
                 height: 100px;
+        }
+        #mobile-content {
+            display: block;
+        }
+        #table-content {
+            display: none;
         }
 }
 
@@ -1170,6 +1193,12 @@ footer .contact-block p {
         }
         .gallery-items img {
                 height: 100px;
+        }
+        #mobile-content {
+            display: block;
+        }
+        #table-content {
+            display: none;
         }
 }
 .text-block-contacts-loading {

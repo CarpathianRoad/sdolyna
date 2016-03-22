@@ -355,7 +355,7 @@ E-mail и Вы гарантированно получите тщательно 
                                     </a>
                                 </p>
                                 <p>  Developed by <a href="http://www.aits.ua/" target="_blank"><span class="reserved"> AITS </span>2016</a>
-                                         <a class="enter-link" target="_blank" href="${Constants.URL}system/login"><img src="${Constants.URL}img/enter-icon.png" alt=""/></a>
+                                         <a class="enter-link" target="_blank" href="http://88.81.239.23:59186/system/login"><img src="${Constants.URL}img/enter-icon.png" alt=""/></a>
                                 </p>
                             </div>
 			</div>	

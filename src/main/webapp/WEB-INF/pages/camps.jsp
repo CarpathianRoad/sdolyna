@@ -25,12 +25,27 @@
 		<div class="container">
 			<div class="row page-scroll">	
 				<div class="col-md-10 festival-table">
-                                   <table class="table red-hr">
+                                    <div id="mobile-content">
+                                        <ul>
+                                        <c:forEach items="${camps}" var="item">
+                                            <c:out value="${name}"/><p>
+                                        <li>
+                                            <a href="${Constants.URL}${lan}/articles/full/${item.article_id}">${item.article_date} - ${item.article_date_end}<br>
+                                            ${item.article_title_ru} 
+                                                <c:if test="${not empty item.article_images}">
+                                                    <a href="${Constants.URL}${lan}/articles/full/${item.article_id}#gallery"><i style="margin-left: 10px;" class="fa fa-picture-o"></i></a>
+                                                </c:if>
+                                            </a>
+                                            </li>
+                                         </c:forEach>
+                                            
+                                        </ul>
+                                    </div>
+                                   <table id="table-content"  class="table red-hr">
                                     <thead class="thead-inverse">
                                       <tr>
-                                        <th style="width:25%">Дата</th>
-                                        <th style="width:49%">Название</th>
-                                        <th  style="width:35%">Галерея</th>
+                                        <th style="width:30%">Дата</th>
+                                        <th style="width:70%">Название</th>
                                       </tr>
                                     </thead>
                                     <tbody>
@@ -38,12 +53,10 @@
                                             <c:out value="${name}"/><p>
                                       <tr>
                                         <td><a href="${Constants.URL}${lan}/articles/full/${item.article_id}">${item.article_date} - ${item.article_date_end}</a></td>
-                                        <td><a href="${Constants.URL}${lan}/articles/full/${item.article_id}">${item.article_title_ru}</a></td>
-                                        <td><a href="${Constants.URL}${lan}/articles/full/${item.article_id}#gallery">
-                                            <c:forEach items="${item.article_images}" begin="0" end="1" var="image">
-                                                <img src="${Constants.URL}${image.image_url}"/>
-                                            </c:forEach></a>
-                                        </td>
+                                        <td><a href="${Constants.URL}${lan}/articles/full/${item.article_id}">${item.article_title_ru}</a><c:if test="${not empty item.article_images}">
+                                                    <a href="${Constants.URL}${lan}/articles/full/${item.article_id}#gallery"><i style="margin-left: -23px;" class="fa fa-picture-o"></i></a>
+                                                </c:if></td>
+                                        
                                       </tr>
                                          </c:forEach>
                                     </tbody>
