@@ -1007,6 +1007,12 @@ footer .adress-block {
     font-weight: 100;
     font-size: 18px;
 }
+.adress-block p.facebook {
+    margin-bottom: 0px;
+}
+#minfin-informer-m1Fn-calc {
+    display: none;
+}
 footer .contacts-block {
     margin-left: -37px;
     font-size: 17px;
@@ -1160,4 +1166,39 @@ footer .contact-block p {
         .gallery-items img {
                 height: 100px;
         }
+}
+.text-block-contacts-loading {
+	display: table;
+    height: inherit;
+    text-align: center;
+    width: 100%;
+}
+.text-block-contacts-loading .main-text-block {
+    display: table-cell;
+    vertical-align: middle;
+}
+.validation {
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    display: block;
+    color: rgb(158, 13, 13);
+}
+
+#mail-complete {
+    display: none;
+}
+#mail-loading {
+    display: none;
+}
+#mail-complete .main-text-block {
+    font-size: 25px;
+    text-align: center;
+    color: #fff;
+}
+.loading-gif {
+    width: 200px;
+    margin: auto;
+    display: block;
 }

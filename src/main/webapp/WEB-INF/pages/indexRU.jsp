@@ -270,10 +270,99 @@ E-mail и Вы гарантированно получите тщательно 
            
                         <button type="submit" class="btn btn-skin btn-block" id="btnContactUs">
                             Отправить</button>
+                    <div class="validation"></div>
        
                 </div>
                 </form>
-				
+		<div id="mail-loading" class="side-block right-block">
+					<div class="text-block-contacts-loading">
+						<div class="main-text-block">
+							<img class="loading-gif" src="${Constants.URL}img/loading-x.gif" />
+						</div>
+					</div>
+				</div>
+				<div id="mail-complete" class="side-block right-block">
+					<div class="text-block-contacts-loading">
+						<div class="main-text-block">
+							
+    <section id="contact" class="home-section text-center">
+		<div class="heading-contact">
+			<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-md-offset-2">
+					
+					<div class="section-heading">
+					<div class="wow bounceInDown" data-wow-delay="0.4s">
+					<h2>Свяжитесь с нами</h2>
+					</div>
+					<p class="wow lightSpeedIn" data-wow-delay="0.3s">Заполните эти поля и представители нашей компании свяжуться с вами</p>
+					</div>
+					
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="container">
+
+    <div class="row">
+        <div class="col-lg-8 col-md-offset-2">
+            <div class="form-wrapper marginbot-50">
+                <form id="contact-form">
+                <div class="row">
+    
+                        <div class="form-group">
+                            <label for="name">
+                                Ваше имя</label>
+                            <input type="text" class="form-control" id="name" placeholder="Введите имя" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">
+                                Ваш Email </label>
+                                <input type="email" class="form-control" id="email" placeholder="Введите email" required="required" />
+                        </div>
+          
+             
+                        <div class="form-group">
+                            <label for="name">
+                                Сообщение</label>
+                            <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
+                                placeholder="Текст сообщения"></textarea>
+                        </div>
+       
+           
+                        <button type="submit" class="btn btn-skin btn-block" id="btnContactUs">
+                            Отправить</button>
+                    <div class="validation"></div>
+       
+                </div>
+                </form>
+		<div id="mail-loading" class="side-block right-block">
+					<div class="text-block-contacts-loading">
+						<div class="main-text-block">
+							<img class="loading-gif" src="${Constants.URL}img/loading-x.gif" />
+						</div>
+					</div>
+				</div>
+				<div id="mail-complete" class="side-block right-block">
+					<div class="text-block-contacts-loading">
+						<div class="main-text-block">
+							Ваш лист відправлено. <br/>
+							Зачекайте хвилинку.<br/>
+							<img class="loading-gif" src="${Constants.URL}img/loading-x.gif" />
+						</div>
+					</div>
+				</div>		
+            </div>
+        </div>
+
+    </div>	
+
+		</div>
+	</section>
+							<img class="loading-gif" src="${Constants.URL}img/loading-x.gif" />
+						</div>
+					</div>
+				</div>		
             </div>
         </div>
 
@@ -287,6 +376,23 @@ E-mail и Вы гарантированно получите тщательно 
                             <div class="col-md-6 adress-block">
                                 Лицензия: <a target="_blank" href="${Constants.URL}img/lic.jpg">АЕ № 185710 выдана Государственным агентством Украины по туризму и курортам</a> <br/>
                                 <p>89313 Украина, Закарпатская область, Свалявский район, <br/>с. Поляна, ул. Курортная 10</p>
+                                <p class="facebook">
+                                    <a href="https://www.facebook.com/sunvalley2014" target="_blank">
+                                        <img src="${Constants.URL}img/icon_fb.png" alt="Facebook">
+                                    </a>
+                                </p>
+                                <!-- Minfin.com.ua calc informer 200x112 violet-->
+                                <div id="minfin-informer-m1Fn-calc">
+                                    Загружаем 
+                                    <a href="http://minfin.com.ua/currency/" target="_blank">курсы валют</a> от minfin.com.ua</a>
+                                </div>
+                                <script type="text/javascript">
+                                    var iframe = '<ifra'+'me width="200" height="112" fram'+'eborder="0" src="http://informer.minfin.com.ua/gen/calc/com/?color=violet" vspace="0" scrolling="no" hspace="0" allowtransparency="true"style="width:200px;height:112px;ove'+'rflow:hidden;"></iframe>';var cl = 'minfin-informer-m1Fn-calc';document.getElementById(cl).innerHTML = iframe; 
+                                </script>
+                                <noscript>
+                                    <img src="http://informer.minfin.com.ua/gen/img.png" width="1" height="1" alt="minfin.com.ua: курсы валют" title="Курс валют" border="0" />
+                                </noscript>
+
                             </div>
                             <div class="col-md-3 contacts-block">
                                 <span style="letter-spacing: -1px;">Тел: +38 (0312) 44-30-54, 44-30-24,</span><br/>
@@ -319,14 +425,6 @@ E-mail и Вы гарантированно получите тщательно 
     <!-- Custom Theme JavaScript -->
     <script src="${Constants.URL}js/custom.js"></script>
     <script>
-        $("#show-contact").click(function(){
-            $("#contact .heading-contact").toggle("slow");
-            $("#contact .form-wrapper").toggle("slow");
-        });
-        $("#maximage div").click(function(){
-            console.log("cs");
-            //window.location.href="${Constants.URL}${lan}/articles/full/"+$(this).attr("title");
-        });
     </script>
 </body>
 

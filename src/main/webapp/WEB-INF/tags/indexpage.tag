@@ -87,6 +87,7 @@
 	<!-- Section: about -->
     <jsp:doBody/>
         
+    
     <section id="contact" class="home-section text-center">
 		<div class="heading-contact">
 			<div class="container">
@@ -134,10 +135,26 @@
            
                         <button type="submit" class="btn btn-skin btn-block" id="btnContactUs">
                             Отправить</button>
+                    <div class="validation"></div>
        
                 </div>
                 </form>
-				
+		<div id="mail-loading" class="side-block right-block">
+					<div class="text-block-contacts-loading">
+						<div class="main-text-block">
+							<img class="loading-gif" src="${Constants.URL}img/loading-x.gif" />
+						</div>
+					</div>
+				</div>
+				<div id="mail-complete" class="side-block right-block">
+					<div class="text-block-contacts-loading">
+						<div class="main-text-block">
+							Ваше письмо отправлено <br/>
+							Подождите минуту.<br/>
+							<img class="loading-gif" src="${Constants.URL}img/loading-x.gif" />
+						</div>
+					</div>
+				</div>		
             </div>
         </div>
 
@@ -195,10 +212,6 @@
                 $("#menu-item-"+url).addClass("active");
             }
             $("#${lan}-lan").addClass("active");
-        });
-        $("#show-contact").click(function(){
-            $("#contact .heading-contact").toggle("slow");
-            $("#contact .form-wrapper").toggle("slow");
         });
     </script>
 </body>

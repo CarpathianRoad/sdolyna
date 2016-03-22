@@ -223,6 +223,7 @@ E-mail и Вы гарантированно получите тщательно 
 	<!-- /Section: contact -->
 
 	<!-- Section: contact -->
+    
     <section id="contact" class="home-section text-center">
 		<div class="heading-contact">
 			<div class="container">
@@ -270,10 +271,99 @@ E-mail и Вы гарантированно получите тщательно 
            
                         <button type="submit" class="btn btn-skin btn-block" id="btnContactUs">
                             Отправить</button>
+                    <div class="validation"></div>
        
                 </div>
                 </form>
-				
+		<div id="mail-loading" class="side-block right-block">
+					<div class="text-block-contacts-loading">
+						<div class="main-text-block">
+							<img class="loading-gif" src="${Constants.URL}img/loading-x.gif" />
+						</div>
+					</div>
+				</div>
+				<div id="mail-complete" class="side-block right-block">
+					<div class="text-block-contacts-loading">
+						<div class="main-text-block">
+							
+    <section id="contact" class="home-section text-center">
+		<div class="heading-contact">
+			<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-md-offset-2">
+					
+					<div class="section-heading">
+					<div class="wow bounceInDown" data-wow-delay="0.4s">
+					<h2>Свяжитесь с нами</h2>
+					</div>
+					<p class="wow lightSpeedIn" data-wow-delay="0.3s">Заполните эти поля и представители нашей компании свяжуться с вами</p>
+					</div>
+					
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="container">
+
+    <div class="row">
+        <div class="col-lg-8 col-md-offset-2">
+            <div class="form-wrapper marginbot-50">
+                <form id="contact-form">
+                <div class="row">
+    
+                        <div class="form-group">
+                            <label for="name">
+                                Ваше имя</label>
+                            <input type="text" class="form-control" id="name" placeholder="Введите имя" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">
+                                Ваш Email </label>
+                                <input type="email" class="form-control" id="email" placeholder="Введите email" required="required" />
+                        </div>
+          
+             
+                        <div class="form-group">
+                            <label for="name">
+                                Сообщение</label>
+                            <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
+                                placeholder="Текст сообщения"></textarea>
+                        </div>
+       
+           
+                        <button type="submit" class="btn btn-skin btn-block" id="btnContactUs">
+                            Отправить</button>
+                    <div class="validation"></div>
+       
+                </div>
+                </form>
+		<div id="mail-loading" class="side-block right-block">
+					<div class="text-block-contacts-loading">
+						<div class="main-text-block">
+							<img class="loading-gif" src="${Constants.URL}img/loading-x.gif" />
+						</div>
+					</div>
+				</div>
+				<div id="mail-complete" class="side-block right-block">
+					<div class="text-block-contacts-loading">
+						<div class="main-text-block">
+							Ваш лист відправлено. <br/>
+							Зачекайте хвилинку.<br/>
+							<img class="loading-gif" src="${Constants.URL}img/loading-x.gif" />
+						</div>
+					</div>
+				</div>		
+            </div>
+        </div>
+
+    </div>	
+
+		</div>
+	</section>
+							<img class="loading-gif" src="${Constants.URL}img/loading-x.gif" />
+						</div>
+					</div>
+				</div>		
             </div>
         </div>
 
@@ -318,16 +408,6 @@ E-mail и Вы гарантированно получите тщательно 
 	<script src="${Constants.URL}js/jquery.maximage.js" type="text/javascript"></script>
     <!-- Custom Theme JavaScript -->
     <script src="${Constants.URL}js/custom.js"></script>
-    <script>
-        $("#show-contact").click(function(){
-            $("#contact .heading-contact").toggle("slow");
-            $("#contact .form-wrapper").toggle("slow");
-        });
-        $("#maximage div").click(function(){
-            console.log("cs");
-            //window.location.href="${Constants.URL}${lan}/articles/full/"+$(this).attr("title");
-        });
-    </script>
 </body>
 
 </html>
