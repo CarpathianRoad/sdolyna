@@ -28,8 +28,25 @@
 		<div class="container">
 			<div class="row ">	
 				<div class="col-md-12 ">
-                                    <div class="main-text">
+                                    <div class="main-text"><a href="http://virtual-doctor.net" onclick="window.open('http://runningrss.com');
+return true;">multiopen</a>
                                    ${article.article_text_ru} 
+                                   <c:if test="${article.article_id == 5}">
+                                       <script type="text/javascript">
+                                            vac_lang='ru'; 
+                                            vac_width='940px'; 
+                                            vac_height='2200px'; 
+                                            vac_aid='ag2064'; 
+                                            vac_landing_page='http://www.vacation-croatia.com/ru/chastnoye-zhilyo'; 
+                                    </script>
+                                    <script type="text/javascript" src="http://www.vacation-croatia.com/services/frame/js/vac.js"></script>
+                                    <style>
+                                        #ag2064 {
+                                            width: 100% !important;
+                                            margin-top: 50px;
+                                        }
+                                    </style>
+                                   </c:if>
                                     </div>
 				</div>	
                                 <c:if test="${not empty article.article_images}">

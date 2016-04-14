@@ -312,40 +312,6 @@ E-mail и Вы гарантированно получите тщательно 
                             </div>
                             <div class="col-md-3 contacts-block">
                                 
-                                <!-- Minfin.com.ua calc informer 200x112 violet-->
-                                <div id="minfin-informer-m1Fn-calc">
-                                    Загружаем 
-                                    <a href="http://minfin.com.ua/currency/" target="_blank">курсы валют</a> от minfin.com.ua</a>
-                                </div>
-                                <script type="text/javascript">
-                                    var iframe = '<ifra'+'me width="200" height="112" fram'+'eborder="0" src="http://informer.minfin.com.ua/gen/calc/com/?color=violet" vspace="0" scrolling="no" hspace="0" allowtransparency="true"style="width:200px;height:112px;ove'+'rflow:hidden;"></iframe>';var cl = 'minfin-informer-m1Fn-calc';document.getElementById(cl).innerHTML = iframe; 
-                                </script>
-                                <noscript>
-                                    <img src="http://informer.minfin.com.ua/gen/img.png" width="1" height="1" alt="minfin.com.ua: курсы валют" title="Курс валют" border="0" />
-                                </noscript>
-                                <link rel="stylesheet" type="text/css" href="https://s1.gismeteo.ua/static/css/informer2/gs_informerClient.min.css">
-<div id="gsInformerID-f1Lj8tpnLR5ndS" class="gsInformer" style="width:186px;height:69px">
-  <div class="gsIContent">
-   <div id="cityLink">
-     <a href="https://www.gismeteo.ua/weather-mukacheve-4960/" target="_blank">Погода в Мукачево</a>
-   </div>
-   <div class="gsLinks">
-     <table>
-       <tr>
-         <td>
-           <div class="leftCol">
-             <a href="https://www.gismeteo.ua" target="_blank">
-              
-               
-             </a>
-           </div>
-           </td>
-        </tr>
-      </table>
-    </div>
-  </div>
-</div>
-<script src="https://www.gismeteo.ua/ajax/getInformer/?hash=f1Lj8tpnLR5ndS" type="text/javascript"></script>
                             </div>
                             <div class="col-md-3 contact-block">
                                 <a href="#contact" id="show-contact" class="btn btn-skin btn-lg btn-scroll btn-contact">Связаться</a>
