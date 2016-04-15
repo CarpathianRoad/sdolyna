@@ -44,7 +44,7 @@
                                 	<c:forEach items="${articles}" var="item">
                                             <tr class="table-item">
                                                 <td class="text-center counter">${count}</td>
-                                                <td><a target="_blank" href="${Constants.URL}ru/articles/full/${item.article_id}">${item.article_title_ru}</a></td>
+                                                <td><a target="_blank" href="http://www.sdolyna.com/ru/articles/full/${item.article_id}">${item.article_title_ru}</a></td>
                                                 <td class="text-center">${item.article_lang}</td>
                                                 <td class="text-center"><a href="<c:url value="/system/edit/${item.article_id}"/>"><img class="article-buttons" src="${Constants.URL}img/edit.png" /></a></td>
                                                 <c:if test="${category != '0'}">

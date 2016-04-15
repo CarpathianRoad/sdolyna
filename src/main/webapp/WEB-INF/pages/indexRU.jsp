@@ -304,22 +304,22 @@ E-mail и Вы гарантированно получите тщательно 
                                 Лицензия: <a target="_blank" href="${Constants.URL}img/lic.jpg">АЕ № 185710 выдана Государственным агентством Украины по туризму и курортам <img src="${Constants.URL}img/pdf.png" alt="PDF"></a> <br/>
                                 <p>89313 Украина, Закарпатская область, Свалявский район, <br/>с. Поляна, ул. Курортная 10</p>
                                 
-                                <span style="letter-spacing: -1px;">Тел: +38 (0312) 44-30-54, 44-30-24,</span><br/>
-                                Факс: +38 (0312) 44-30-24<br/> 
-                                Моб. тел.: +380949183054<br/>
-                                E-mail: <a href="mailto:sonyachna-dolyna@ukr.net">sonyachna-dolyna@ukr.net</a>
 
                             </div>
                             <div class="col-md-3 contacts-block">
                                 
-                            </div>
-                            <div class="col-md-3 contact-block">
-                                <a href="#contact" id="show-contact" class="btn btn-skin btn-lg btn-scroll btn-contact">Связаться</a>
+                                <span style="letter-spacing: -1px;">Тел: +38 (0312) 44-30-54, 44-30-24,</span><br/>
+                                Факс: +38 (0312) 44-30-24<br/> 
+                                Моб. тел.: +380949183054<br/>
+                                E-mail: <a href="mailto:sonyachna-dolyna@ukr.net">sonyachna-dolyna@ukr.net</a>
                                 <p class="facebook">
                                     <a href="https://www.facebook.com/sunvalley2014" target="_blank">
                                         <img src="${Constants.URL}img/icon_fb.png" alt="Facebook">
                                     </a>
                                 </p>
+                            </div>
+                            <div class="col-md-3 contact-block">
+                                <a href="#contact" id="show-contact" class="btn btn-skin btn-lg btn-scroll btn-contact">Связаться</a>
                                 <p>  Developed by <a href="http://www.aits.ua/" target="_blank"><span class="reserved"> AITS </span>2016</a>
                                          <a class="enter-link" target="_blank" href="http://88.81.239.23:59186/system/login"><img src="${Constants.URL}img/enter-icon.png" alt=""/></a>
                                 </p>

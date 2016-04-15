@@ -694,7 +694,7 @@ form#contact-form input:focus,form#contact-form select:focus,form#contact-form t
 footer {
     font-family: Roboto-Light;
     background-color: #534B6B;
-    height: 300px;
+    height: 180px;
     color: #B1B0B4;
     font-weight: 100;
 }
@@ -712,7 +712,6 @@ footer {
 .btn-contact {
     display: block;
     width: 305px;
-    margin-top: 38px;
     font-size: 20px;
     padding-top: 7px;
 }
@@ -1240,9 +1239,11 @@ footer .contact-block p {
 }
 .widget .wether {
         float: left;
-    margin-top: 55px;
 }
 .widget .money {
        width: 660px;
     float: left;
+}
+.facebook {
+    margin-top: 5px;
 }
