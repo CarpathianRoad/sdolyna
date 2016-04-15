@@ -840,7 +840,6 @@ footer .enter-link img {
     padding-top: 50px;
 }
 #main table td img {
-            height: 60px;    margin-top: 10px;
 }
 .festival-table {
     margin: auto;
@@ -1235,4 +1234,15 @@ footer .contact-block p {
     width: 200px;
     margin: auto;
     display: block;
+}
+.widget {
+    padding-left: 50px;
+}
+.widget .wether {
+        float: left;
+    margin-top: 55px;
+}
+.widget .money {
+       width: 660px;
+    float: left;
 }
