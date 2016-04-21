@@ -17,7 +17,7 @@
      <div class="row article-list">
                     <div class="col-lg-12">
                         <h4>Фестивали</h4>
-                        <div class="add-button-panel"><button class="btn btn-success btn-mini" id="sudmitData" type="submit"><a href="${Constants.URL}system/festivals/add">+ Добавить</a></button></div>
+                        <div class="add-button-panel"><button class="btn btn-success btn-mini" id="sudmitData" type="submit"><a href="<c:url value="/system/festivals/add" />">+ Добавить</a></button></div>
                         <div class="row">
                 	<div class="col-lg-12">
                     	<div class="table-responsive">

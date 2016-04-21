@@ -35,7 +35,7 @@
 	</head>
 	<body>
      	<div>
-<form action="${Constants.URL}archive/do/uploadimage" class="dropzone"  id="my-awesome-dropzone">
+<form action="<c:url value="/archive/do/uploadimage" />" class="dropzone"  id="my-awesome-dropzone">
         	<input type="hidden" name="path" value="${folder}/images" />
         	<input type="file" name="file" style="display:none" />
     	</form>

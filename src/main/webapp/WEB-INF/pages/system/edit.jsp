@@ -23,7 +23,7 @@
                 <a href="#" data-toggle="modal" data-target="#shureModal"> <i class="fa fa-fw fa-list-alt"></i> Вернуться в категорию "${cat_name}"</a>
             </li>
         </ol>
-	<form action="${Constants.URL}system/do/editdata" name="addArticleForm" id="addForm" method="POST" type="multipart/form-data">
+	<form action="<c:url value="/system/do/editdata" />" name="addArticleForm" id="addForm" method="POST" type="multipart/form-data">
             <input type="hidden" class="form-control" name="category" value="${category}">
             <input type="hidden" name="dir" id="dir-name" value="${folder}" />
             <input type="hidden" class="form-control" name="article_id" value="${article.article_id}">
@@ -121,7 +121,7 @@
                 <div class="modal-footer">
                     <button class="btn btn-success btn-mini sudmitData" type="submit" data-dismiss="modal">Сохранить изменения</button>
                     <button class="btn btn-warning btn-mini modal-btn-warning" type="submit" data-dismiss="modal">Отменить</button>
-                    <a href="${Constants.URL}system/index/${category}"><button type="button" class="btn btn-danger btn-mini">Назад в категорию</button></a>
+                    <a href="<c:url value="/system/index/${category}" />"><button type="button" class="btn btn-danger btn-mini">Назад в категорию</button></a>
                 </div>
           </div>
         </div>

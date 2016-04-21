@@ -52,29 +52,29 @@
     <div class="collapse navbar-collapse" id="main-header-title">
       <ul class="nav nav-pills navbar-left">
         <li id="category1">
-            <a href="${Constants.URL}system/index/1">
+            <a href="<c:url value="/system/index/1" />">
                 <span>Фестивали</span>
             </a>
         </li>
         <li id="category3">
-            <a href="${Constants.URL}system/index/3">
+            <a href="<c:url value="/system/index/3" />">
                 <span>Детские лагеря</span>
             </a>
         </li>
         <li id="index">
-            <a href="${Constants.URL}system/index">
+            <a href="<c:url value="/system/index" />">
                 <span>Страны</span>
             </a>
         </li>
         <li style="display:none" id="category2">
-            <a href="${Constants.URL}system/index/2">
+            <a href="<c:url value="/system/index/2" />">
                 <span>Другое</span>
             </a>
         </li>
       </ul>
       <ul class="nav nav-pills navbar-right">
           
-          <li><a href="${Constants.URL}system/logout.do" class="btn-exit">Выход</a></li>
+          <li><a href="<c:url value="/system/logout.do" />" class="btn-exit">Выход</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

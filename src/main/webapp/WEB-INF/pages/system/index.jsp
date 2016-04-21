@@ -18,7 +18,7 @@
                     <div class="col-lg-12">
                         <h4>${title}</h4>
                         <c:if test="${category != '0'}">
-                            <div class="add-button-panel"><button class="btn btn-success btn-mini" id="sudmitData" type="submit"><a href="${Constants.URL}system/add/${category}">+ Добавить</a></button></div>
+                            <div class="add-button-panel"><button class="btn btn-success btn-mini" id="sudmitData" type="submit"><a href="<c:url value="/system/add/${category}" />">+ Добавить</a></button></div>
                         
                         </c:if>
                         <div class="row">
