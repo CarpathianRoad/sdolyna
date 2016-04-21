@@ -48,26 +48,26 @@ public class SystemController {
     Helpers Helpers = new Helpers();
     Transliterator TransliteratorClass = new Transliterator();
     
-    @RequestMapping(value = {"/Sdolyna/system/login","/Sdolyna/system/login"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/Sdolyna/system/login","/Sdolyna/system/login", "/Sdolyna/system/login/","/Sdolyna/system/login/"}, method = RequestMethod.GET)
     public ModelAndView login(HttpServletRequest request, HttpServletResponse response)  {
         ModelAndView model = new ModelAndView("/system/login");
         
         return model;
     }
     
-    @RequestMapping(value = {"/Sdolyna/system/ajax/check/user", "/system/ajax/check/user"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/Sdolyna/system/ajax/check/user", "/system/ajax/check/user", "/Sdolyna/system/ajax/check/user/", "/system/ajax/check/user/"}, method = RequestMethod.GET)
 	public @ResponseBody String archiveCheckUser(HttpServletRequest request,HttpServletResponse response) throws Exception {
     	return Users.isExitsUser(request.getParameter("user_login"), request.getParameter("user_password"));
     }
         
-    @RequestMapping(value = {"/system/login.do","/Sdolyna/system/login.do"}, method = RequestMethod.POST)
+    @RequestMapping(value = {"/system/login.do","/Sdolyna/system/login.do", "/system/login.do/","/Sdolyna/system/login.do/"}, method = RequestMethod.POST)
     public ModelAndView login(@RequestParam("user_code") String user_code, @RequestParam("user_login") String user_name, @RequestParam("user_password") String user_password, HttpServletRequest request, HttpServletResponse response) throws Exception {
         UserModel user = Users.getOneUserFullById(user_code);
         HttpSession session = request.getSession(true);
 	session.setAttribute("user", user);
         return new ModelAndView("redirect:" + "/system/index/1");   
     }
-    @RequestMapping(value = {"/Sdolyna/system/index", "/system/main", "/system/index"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/Sdolyna/system/index", "/system/main", "/system/index", "/Sdolyna/system/index/"}, method = RequestMethod.GET)
     public ModelAndView index(HttpServletRequest request, HttpServletResponse response) throws SQLException, ClassNotFoundException, InstantiationException, IllegalAccessException, ParseException  {
         ModelAndView model = new ModelAndView("/system/index");
         model.addObject("articles", Articles.getArticlesByType("0"));
@@ -76,7 +76,7 @@ public class SystemController {
         return model;
     }
     
-    @RequestMapping(value = {"/Sdolyna/system/index/{id}", "/system/index/{id}"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/Sdolyna/system/index/{id}", "/system/index/{id}", "/Sdolyna/system/index/{id}/", "/system/index/{id}/"}, method = RequestMethod.GET)
     public ModelAndView category(@PathVariable("id") String id, HttpServletRequest request, HttpServletResponse response) throws SQLException, ClassNotFoundException, InstantiationException, IllegalAccessException, ParseException  {
         ModelAndView model = new ModelAndView("/system/index");
         model.addObject("articles", Articles.getArticlesByType(id));
@@ -84,14 +84,14 @@ public class SystemController {
     	model.addObject("cat_name", Helpers.getCatName(id));
         return model;
     }
-    @RequestMapping(value = {"/Sdolyna/system/logout.do","/system/logout.do/"})
+    @RequestMapping(value = {"/Sdolyna/system/logout.do","/system/logout.do", "/Sdolyna/system/logout.do/","/system/logout.do/"})
     public ModelAndView logout(HttpServletRequest request, HttpServletResponse response) throws Exception {
         request.setCharacterEncoding("UTF-8");
         HttpSession session = request.getSession(false);
         if (session != null) { session.invalidate(); }
         return new ModelAndView("redirect:" + "/system/login"); 
     } 
-    @RequestMapping(value = {"/Sdolyna/system/add/{id}", "/system/add/{id}/"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/Sdolyna/system/add/{id}", "/system/add/{id}", "/Sdolyna/system/add/{id}/", "/system/add/{id}/"}, method = RequestMethod.GET)
     public ModelAndView projectAdd(@PathVariable("id") String id, HttpServletRequest request, HttpServletResponse response) throws Exception {
     	ModelAndView model = new ModelAndView("/system/add");
     	String folder = "files";
@@ -102,7 +102,7 @@ public class SystemController {
     	return model;
     }
     
-    @RequestMapping(value = {"/Sdolyna/system/edit/{id}", "/system/edit/{id}/"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/Sdolyna/system/edit/{id}", "/system/edit/{id}", "/Sdolyna/system/edit/{id}/", "/system/edit/{id}/"}, method = RequestMethod.GET)
     public ModelAndView projectEdit(@PathVariable("id") String id, HttpServletRequest request, HttpServletResponse response) throws Exception {
     	ModelAndView model= new ModelAndView("/system/edit");
     	ArticleModel temp = Articles.getArticleByID(id);
@@ -116,7 +116,7 @@ public class SystemController {
     	return model;
     }
     
-    @RequestMapping(value = {"/Sdolyna/tools/imageupload/{folder}/","/tools/imageupload/{folder}"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/Sdolyna/tools/imageupload/{folder}","/tools/imageupload/{folder}", "/Sdolyna/tools/imageupload/{folder}/","/tools/imageupload/{folder}/"}, method = RequestMethod.GET)
     public ModelAndView fileManager (@PathVariable("folder") String folder,HttpServletRequest request, HttpServletResponse response) throws Exception {
         String path = request.getParameter("path");
         String type = request.getParameter("type");
@@ -200,7 +200,7 @@ public class SystemController {
     	Articles.updateArticle(id, titleEN, titleRU, textEN, textRU, category, date, date_end);
     	return new ModelAndView("redirect:" + "/system/index/"+category);
     }
-    @RequestMapping(value = {"/Sdolyna/system/delete/{id}","/system/delete/{id}/"})
+    @RequestMapping(value = {"/Sdolyna/system/delete/{id}","/system/delete/{id}", "/Sdolyna/system/delete/{id}/","/system/delete/{id}/"})
     public ModelAndView deleteArticle(@PathVariable("id") String id, HttpServletRequest request, HttpServletResponse response) throws Exception {
     	request.setCharacterEncoding("UTF-8");
         ArticleModel temp = Articles.getArticleByID(id);
@@ -209,7 +209,7 @@ public class SystemController {
     }
         
         
-    @RequestMapping(value = {"/Sdolyna/system/do/uploadimage", "/system/do/uploadimage/"}, method = RequestMethod.POST)
+    @RequestMapping(value = {"/Sdolyna/system/do/uploadimage", "/system/do/uploadimage", "/Sdolyna/system/do/uploadimage/", "/system/do/uploadimage/"}, method = RequestMethod.POST)
     public @ResponseBody String uploadImageHandler(@RequestParam("file") MultipartFile file, @RequestParam("path") String path,  HttpServletRequest request) {
     	Integer curent = Integer.parseInt(Helpers.lastFileModified(Constants.home+path).getName().split("\\.")[0]) + 1;
                 String ext = file.getOriginalFilename().split("\\.")[1];
@@ -233,11 +233,11 @@ public class SystemController {
     	}
     }
     
-    @RequestMapping(value = {"/Sdolyna/getlastfileinfolder", "/getlastfileinfolder"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/Sdolyna/getlastfileinfolder", "/getlastfileinfolder", "/Sdolyna/getlastfileinfolder/", "/getlastfileinfolder/"}, method = RequestMethod.GET)
     public @ResponseBody String getLastFile(@RequestParam("path") String path,  HttpServletRequest request) {
     	return Helpers.lastFileModified(Constants.home+path).getName();
     }
-    @RequestMapping(value = {"/Sdolyna/system/do/uploadfile", "/system/do/uploadfile"}, method = RequestMethod.POST)
+    @RequestMapping(value = {"/Sdolyna/system/do/uploadfile", "/system/do/uploadfile", "/Sdolyna/system/do/uploadfile/", "/system/do/uploadfile/"}, method = RequestMethod.POST)
     public @ResponseBody String uploadFileHandler(@RequestParam("file") MultipartFile file, @RequestParam("path") String path,  HttpServletRequest request) {
     	Integer curent = Integer.parseInt(Helpers.lastFileModified(Constants.home+path).getName().split("\\.")[0]) + 1;
                 String ext = file.getOriginalFilename().split("\\.")[1];
@@ -261,14 +261,14 @@ public class SystemController {
     	}
     }
     
-    @RequestMapping(value = {"/Sdolyna/system/do/removefile", "/system/do/removefile"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/Sdolyna/system/do/removefile", "/system/do/removefile", "/Sdolyna/system/do/removefile/", "/system/do/removefile/"}, method = RequestMethod.GET)
     public @ResponseBody String removeFileOrDir(HttpServletRequest request) {
     	String path = request.getParameter("path");
     	File temp = new File(Constants.home + path);
     	Boolean result = temp.delete();
     	return result.toString();
     }
-    @RequestMapping(value = {"/Sdolyna/uploadFile", "/uploadFile"}, method = RequestMethod.POST)
+    @RequestMapping(value = {"/Sdolyna/uploadFile", "/uploadFile", "/Sdolyna/uploadFile/", "/uploadFile/"}, method = RequestMethod.POST)
     public @ResponseBody
     String uploadFileHandlerFull(@RequestParam("upload") MultipartFile file, @RequestParam("path") String path,  HttpServletRequest request) {
                 Integer curent = Integer.parseInt(Helpers.lastFileModified(Constants.home+path).getName().split("\\.")[0]) + 1;
