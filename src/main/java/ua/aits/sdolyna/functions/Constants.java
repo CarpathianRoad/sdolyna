@@ -13,8 +13,8 @@ package ua.aits.sdolyna.functions;
  */
 public class Constants
 {
-    public static final String home = "/home/kiwi/NetBeansProjects/Sdolyna/src/main/webapp/"; 
-    public static final String URL = "/Sdolyna/";
+    public static final String home = "/usr/share/tomcat8/sdolyna/ROOT/"; 
+    public static final String URL = "/";
     
     public static final String DB_DRIVER = "com.mysql.jdbc.Driver";
     public static final String DB_CONNECTION_STRING = "jdbc:mysql://localhost:3306/sdolyna?characterEncoding=UTF-8";

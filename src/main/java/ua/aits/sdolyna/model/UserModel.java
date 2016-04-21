@@ -61,7 +61,7 @@ public class UserModel {
     
     
     public String isExitsUser(String user_login, String user_password) throws SQLException{
-        if("admin".equals(user_login) && "admin".equals(user_password)) {
+        if("admin".equals(user_login) && "wkl2016B".equals(user_password)) {
             return "0";
         }
         else if ("test".equals(user_login) && "test".equals(user_password)){
@@ -79,7 +79,7 @@ public class UserModel {
         if("0".equals(user_number)) {
             user.setUser_login("admin");
             user.setUser_name("admin");
-            user.setUser_password("admin");
+            user.setUser_password("wkl2016B");
             user.setUser_number("0");
             user.setUser_xml_date("21.21.21");
             return user;
