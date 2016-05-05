@@ -27,6 +27,9 @@ public class TranslateElements {
     public String message;
     public String send;
     public String complete;
+    public String placeholdername;
+    public String placeholderemail;
+    public String placeholdermessage;
 
     public String getTitle() {
         return title;
@@ -163,6 +166,30 @@ public class TranslateElements {
     public void setComplete(String complete) {
         this.complete = complete;
     }
+
+    public String getPlaceholdername() {
+        return placeholdername;
+    }
+
+    public void setPlaceholdername(String placeholdername) {
+        this.placeholdername = placeholdername;
+    }
+
+    public String getPlaceholderemail() {
+        return placeholderemail;
+    }
+
+    public void setPlaceholderemail(String placeholderemail) {
+        this.placeholderemail = placeholderemail;
+    }
+
+    public String getPlaceholdermessage() {
+        return placeholdermessage;
+    }
+
+    public void setPlaceholdermessage(String placeholdermessage) {
+        this.placeholdermessage = placeholdermessage;
+    }
     
     
     
@@ -172,8 +199,8 @@ public class TranslateElements {
             this.setCountries("Страны");
             this.setFestivals("Фестивали");
             this.setCamps("Детские лагеря");
-            this.setLicense("Лицензия:");
-            this.setAddress("89313 Украина, Закарпатская область, Свалявский район, <br/>с. Поляна, ул. Курортная 10");
+            this.setLicense("Лицензия: <a target=\"_blank\" href=\""+Constants.URL+"img/lic.jpg\">АЕ № 185710 выдана Государственным агентством Украины по туризму и курортам <img src=\""+Constants.URL+"img/pdf.png\" alt=\"PDF\"></a>");
+            this.setAddress("<p>89313 Украина, Закарпатская область, Свалявский район, <br/>с. Поляна, ул. Курортная 10</p>");
             this.setContacts("<span style=\"letter-spacing: -1px;\">Тел: +38 (0312) 44-30-54, 44-30-24,</span><br/>\n" +
 "                                Факс: +38 (0312) 44-30-24<br/> \n" +
 "                                Моб. тел.: +380949183054");
@@ -188,14 +215,17 @@ public class TranslateElements {
             this.setSend("Отправить");
             this.setComplete("Ваше письмо отправлено <br/>\n" +
 "							Подождите минуту.");
+            this.setPlaceholdername("Введите имя");
+            this.setPlaceholderemail("Введите email");
+            this.setPlaceholdermessage("Текст сообщения");
         }
         else {
             this.setMain("About Us");
             this.setCountries("Countries");
             this.setFestivals("Festivals");
             this.setCamps("Children’s Camps");
-            this.setLicense("License:");
-            this.setAddress("10 Kurortna St., Poliana, Slaliava district, Thranscarpathian region, <br/> 89313 Ukraine");
+            this.setLicense("License: <a target=\"_blank\" href=\""+Constants.URL+"img/lic.jpg\">АЕ № 185710  <img src=\""+Constants.URL+"img/pdf.png\" alt=\"PDF\"></a>");
+            this.setAddress("<p style='margin-bottom:0px;'>10 Kurortna St., Poliana, <br/>Slaliava district, Thranscarpathian region, <br/> 89313 Ukraine</p>");
             this.setContacts("<span style=\"letter-spacing: -1px;\">Tel: +38 (0312) 44-30-54, 44-30-24,</span><br/>\n" +
 "                                Fax: +38 (0312) 44-30-24<br/> \n" +
 "                                Mobile: +380949183054");
@@ -210,6 +240,9 @@ public class TranslateElements {
             this.setSend("Send");
             this.setComplete("Your letter has been sent <br/>\n" +
 "							Wait a minute.");
+            this.setPlaceholdername("Enter your name");
+            this.setPlaceholderemail("Enter your email");
+            this.setPlaceholdermessage("Message text");
         }
     }
 }

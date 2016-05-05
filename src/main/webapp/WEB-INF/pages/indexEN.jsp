@@ -250,12 +250,12 @@ at a reasonable price.
                         <div class="form-group">
                             <label for="name">
                                 Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Введите имя" required="required" />
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name" required="required" />
                         </div>
                         <div class="form-group">
                             <label for="email">
                                 Email </label>
-                                <input type="email" class="form-control" id="email" placeholder="Введите email" required="required" />
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email" required="required" />
                         </div>
           
              
@@ -263,7 +263,7 @@ at a reasonable price.
                             <label for="name">
                                 Message</label>
                             <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
-                                placeholder="Текст сообщения"></textarea>
+                                placeholder="Message text"></textarea>
                         </div>
        
            
@@ -300,8 +300,8 @@ at a reasonable price.
 		<div class="container">
 			<div class="row">
                             <div class="col-md-6 adress-block">
-                                License: <a target="_blank" href="${Constants.URL}img/lic.jpg">АЕ № 185710 выдана Государственным агентством Украины по туризму и курортам <img src="${Constants.URL}img/pdf.png" alt="PDF"></a> <br/>
-                                <p>10 Kurortna St., Poliana, Slaliava district, Thranscarpathian region, <br/> 89313 Ukraine</p>
+                                License: <a target="_blank" href="${Constants.URL}img/lic.jpg">АЕ № 185710  <img src="${Constants.URL}img/pdf.png" alt="PDF"></a> <br/>
+                                <p style="margin-bottom: 0px;">10 Kurortna St., Poliana, <br/>Slaliava district, Thranscarpathian region, <br/> 89313 Ukraine</p>
                                 
 
                             </div>

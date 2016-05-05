@@ -116,12 +116,12 @@
                         <div class="form-group">
                             <label for="name">
                                 ${translate.name}</label>
-                            <input type="text" class="form-control" id="name" placeholder="Введите имя" required="required" />
+                            <input type="text" class="form-control" id="name" placeholder="${translate.placeholdername}" required="required" />
                         </div>
                         <div class="form-group">
                             <label for="email">
                                 Email </label>
-                                <input type="email" class="form-control" id="email" placeholder="Введите email" required="required" />
+                                <input type="email" class="form-control" id="email" placeholder="${translate.placeholderemail}" required="required" />
                         </div>
           
              
@@ -129,7 +129,7 @@
                             <label for="name">
                                 ${translate.message}</label>
                             <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
-                                placeholder="Текст сообщения"></textarea>
+                                placeholder="${translate.placeholdermessage}"></textarea>
                         </div>
        
            
@@ -165,8 +165,8 @@
 		<div class="container">
 			<div class="row">
                             <div class="col-md-6 adress-block">
-                                ${translate.license} <a target="_blank" href="${Constants.URL}img/lic.jpg">АЕ № 185710 выдана Государственным агентством Украины по туризму и курортам <img src="${Constants.URL}img/pdf.png" alt="PDF"></a> <br/>
-                                <p>${translate.address}</p>
+                                ${translate.license}  <br/>
+                                ${translate.address}
 
                             </div>
                             <div class="col-md-3 contacts-block">
