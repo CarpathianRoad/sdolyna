@@ -48,7 +48,7 @@ public class SystemController {
     Helpers Helpers = new Helpers();
     Transliterator TransliteratorClass = new Transliterator();
     
-    @RequestMapping(value = {"/Sdolyna/system/login","/Sdolyna/system/login", "/Sdolyna/system/login/","/Sdolyna/system/login/"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/Sdolyna/system/login","/system/login", "/Sdolyna/system/login/","/system/login/"}, method = RequestMethod.GET)
     public ModelAndView login(HttpServletRequest request, HttpServletResponse response)  {
         ModelAndView model = new ModelAndView("/system/login");
         

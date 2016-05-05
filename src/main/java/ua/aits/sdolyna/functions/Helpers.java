@@ -109,12 +109,13 @@ public class Helpers  {
             return file.isFile();
         }
     });
-    long lastMod = Long.MIN_VALUE;
+    Integer lastMod = 0;
     File choice = null;
     for (File file : files) {
-        if (file.lastModified() > lastMod) {
+        Integer num =  Integer.parseInt(file.getName().split("\\.")[0]);
+        if (num > lastMod) {
             choice = file;
-            lastMod = file.lastModified();
+            lastMod = num;
         }
     }
     return choice;
