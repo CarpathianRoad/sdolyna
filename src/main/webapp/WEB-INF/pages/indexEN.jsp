@@ -11,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Солнечная долина</title>
+    <title>Soniachna Dolyna</title>
 
     <!-- CSS -->
     <link href="${Constants.URL}img/favicon.png" rel="shortcut icon" type="image/x-icon" />
@@ -68,10 +68,10 @@
                                                       <!-- Collect the nav links, forms, and other content for toggling -->
                                                       <div class="collapse navbar-collapse" id="menu">
                                                             <ul class="nav navbar-nav">
-                                                                  <li id="menu-item-about"><a href="#about">Про компанию</a></li>
-                                                                  <li id="menu-item-countries"><a href="#countries">Страны</a></li>
-                                                                  <li id="menu-item-festivals"><a href="${Constants.URL}${lan}/articles/festivals">Фестивали</a></li>
-                                                                  <li id="menu-item-camps"><a href="${Constants.URL}${lan}/articles/camps">Детские лагеря</a></li>
+                                                                  <li id="menu-item-about"><a href="#about">About Us</a></li>
+                                                                  <li id="menu-item-countries"><a href="#countries">Countries</a></li>
+                                                                  <li id="menu-item-festivals"><a href="${Constants.URL}${lan}/articles/festivals">Festivals</a></li>
+                                                                  <li id="menu-item-camps"><a href="${Constants.URL}${lan}/articles/camps">Children’s Camps</a></li>
 
                                                             </ul>
                                                           
@@ -104,7 +104,7 @@
 					
 						<div class="section-heading text-center">
 						<div >
-                                                    <h2>Вас приветствует туристическая компания  <span>“Солнечная Долина”!</span></h2>
+                                                    <h2>Travel Agency <span>“Soniachna Dolyna”</span> Welcomes You!</h2>
 						</div>
 						</div>
 					
@@ -119,34 +119,36 @@
 				</div>
 				<div class="col-md-6">
 				<p>
-					<p style="text-align: center;    margin-top: -5px;">Основными направлениями деятельности нашей фирмы являются:</p>
+					<p style="text-align: center;    margin-top: -5px;">Our Services and Destinations:</p>
 					<p style="margin-left: 25px;
     margin-top: -3px;
     line-height: 21px;
     font-size: 15px;">
-                                            - Отдых на морских курортах (Хорватия, Черногория, Турция, Египет);<br/>
+                                            - Beach holidays (Croatia, Montenegro, Turkey, Egypt);<br/>
 
-- Отдых на горнолыжных курортах (Украина - Карпаты, Словакия, Словения, Австрия);<br/>
+- Ski holidays (Ukraine – the Carpathians, Slovakia, Slovenia, Austria);<br/>
 
-- Отдых в детских оздоровительных лагерях (Закарпатье, Словакия, Венгрия, Хорватия);<br/>
+- Children’s camps (Ukraine – Transcarpathian region, Slovakia, Hungary, Croatia);<br/>
 
-- Отдых и лечение в санаториях (Украина - Закарпатье, Словакия, Чехия, Словения);<br/>
+- Sanatoriums and health resorts treatment (Ukraine – Transcarpathian region, Slovakia, Czech
 
-- Организация экскурсионного обслуживания для индивидуальных туристов и групп (Украина - 
+Republic, Slovenia);<br/>
 
-Закарпатье, Словакия, Венгрия, Австрия, Словения, Чехия, Хорватия);<br/>
+- Organization of excursions for individuals and groups (Ukraine – Transcarpathian region, Slovakia,
 
-- Прием, размещение и экскурсионное обслуживание Ваших зарубежных партнеров и гостей;<br/>
+Hungary, Austria, Slovenia, Czech Republic, Croatia);<br/>
 
-- Бронирование отелей на Украине и за рубежом;<br/>
+- Accommodations and excursions for your foreign business partners and guests;<br/>
 
-- Организация фестивалей, конференций и семинаров;<br/>
+- Hotels booking in Ukraine and abroad;<br/>
 
-- Транспортные услуги;<br/>
+- Organization of festivals, conferences and seminars;<br/>
 
-- Продажа авиабилетов;<br/>
+- Transport services;<br/>
 
-- Все виды страхования.</p>		</div>	
+- Flight tickets;<br/>
+
+- All types of insurance.</p>		</div>	
 			</div>		
 		</div>
 	</section>
@@ -157,15 +159,13 @@
 		<div class="container">
 			<div class="row">
 					<div class="col-lg-10 main-block">
-						Начните путешествовать с нами, и Вы убедитесь, что наши туры качественны и увлекательны.<br/> Мы 
+						Start to travel with us to see that our tours are exciting and of high quality. We will do our best to
 
-приложим все усилия, чтобы Ваш отдых был максимально комфортным. Постоянно мы 
+make your holiday as comfortable as possible. We always offer new destinations and tours for our
 
-предлагаем своим клиентам новые направления и новые программы. Звоните или пишите нам по 
+clients. Call or email us and you are guaranteed to get an elaborate and well-organized holiday tour
 
-E-mail и Вы гарантированно получите тщательно продуманную и хорошо организованную 
-
-программу отдыха по разумной цене.
+at a reasonable price.
 					</div>
 					
 			</div>		
@@ -178,7 +178,7 @@ E-mail и Вы гарантированно получите тщательно 
 					
 						<div class="section-heading text-center">
 						<div class="wow bounceInDown" data-wow-delay="0.2s">
-							<p class="country-head">Направления для отдыха</p>
+							<p class="country-head">Destinations</p>
 						</div>
 						</div>
 					
@@ -190,27 +190,27 @@ E-mail и Вы гарантированно получите тщательно 
 			<div class="row">
 				<div class="col-md-4">
                                     <div class="image-block"><a href="${Constants.URL}${lan}/articles/full/1"><img class="grow img-responsive" src="${Constants.URL}img/gallery/countries/ukr.jpg" alt="" /></a></div>
-                                    <div class="country-title"><a href="${Constants.URL}${lan}/articles/full/1">Украина</a></div>
+                                    <div class="country-title"><a href="${Constants.URL}${lan}/articles/full/1">Ukraine</a></div>
                                 </div>	
 				<div class="col-md-4">
                                     <div class="image-block"><a href="${Constants.URL}${lan}/articles/full/2"><img class="grow img-responsive " src="${Constants.URL}img/gallery/countries/slovakia.jpg" alt="" /></a></div>
-                                    <div class="country-title"><a href="${Constants.URL}${lan}/articles/full/2">Словакия</a></div>
+                                    <div class="country-title"><a href="${Constants.URL}${lan}/articles/full/2">Slovakia</a></div>
                                 </div>	
 				<div class="col-md-4">
                                     <div class="image-block"><a href="${Constants.URL}${lan}/articles/full/3"><img class="grow img-responsive " src="${Constants.URL}img/gallery/countries/hun.jpg" alt="" /></a></div>
-                                    <div class="country-title"><a href="${Constants.URL}${lan}/articles/full/3">Венгрия</a></div>
+                                    <div class="country-title"><a href="${Constants.URL}${lan}/articles/full/3">Hungary</a></div>
                                 </div>	
 				<div class="col-md-4">
                                     <div class="image-block"><a href="${Constants.URL}${lan}/articles/full/4"><img class="grow img-responsive" src="${Constants.URL}img/gallery/countries/slovenia.jpg" alt="" /></a></div>
-                                    <div class="country-title"><a href="${Constants.URL}${lan}/articles/full/4">Словения</a></div>
+                                    <div class="country-title"><a href="${Constants.URL}${lan}/articles/full/4">Slovenia</a></div>
                                 </div>	
 				<div class="col-md-4">
                                     <div class="image-block"><a href="${Constants.URL}${lan}/articles/full/5"><img class="grow img-responsive " src="${Constants.URL}img/gallery/countries/croatia.jpg" alt="" /></a></div>
-                                    <div class="country-title"><a href="${Constants.URL}${lan}/articles/full/5">Хорватия</a></div>
+                                    <div class="country-title"><a href="${Constants.URL}${lan}/articles/full/5">Croatia</a></div>
                                 </div>	
 				<div class="col-md-4">
                                     <div class="image-block"><a href="${Constants.URL}${lan}/articles/full/6"><img class="grow img-responsive " src="${Constants.URL}img/gallery/countries/greece.jpg" alt="" /></a></div>
-                                    <div class="country-title"><a href="${Constants.URL}${lan}/articles/full/6">Греция</a></div>
+                                    <div class="country-title"><a href="${Constants.URL}${lan}/articles/full/6">Greece</a></div>
                                 </div>	
 			</div>		
 		</div>
@@ -230,9 +230,9 @@ E-mail и Вы гарантированно получите тщательно 
 					
 					<div class="section-heading">
 					<div class="wow bounceInDown" data-wow-delay="0.4s">
-					<h2>Свяжитесь с нами</h2>
+					<h2>Contact us</h2>
 					</div>
-					<p class="wow lightSpeedIn" data-wow-delay="0.3s">Заполните эти поля и представители нашей компании свяжуться с вами</p>
+					<p class="wow lightSpeedIn" data-wow-delay="0.3s">Fill out the fields and representatives of our company will contact you</p>
 					</div>
 					
 				</div>
@@ -249,26 +249,26 @@ E-mail и Вы гарантированно получите тщательно 
     
                         <div class="form-group">
                             <label for="name">
-                                Ваше имя</label>
+                                Name</label>
                             <input type="text" class="form-control" id="name" placeholder="Введите имя" required="required" />
                         </div>
                         <div class="form-group">
                             <label for="email">
-                                Ваш Email </label>
+                                Email </label>
                                 <input type="email" class="form-control" id="email" placeholder="Введите email" required="required" />
                         </div>
           
              
                         <div class="form-group">
                             <label for="name">
-                                Сообщение</label>
+                                Message</label>
                             <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
                                 placeholder="Текст сообщения"></textarea>
                         </div>
        
            
                         <button type="submit" class="btn btn-skin btn-block" id="btnContactUs">
-                            Отправить</button>
+                            Send</button>
                     <div class="validation"></div>
        
                 </div>
@@ -283,8 +283,8 @@ E-mail и Вы гарантированно получите тщательно 
 				<div id="mail-complete" class="side-block right-block">
 					<div class="text-block-contacts-loading">
 						<div class="main-text-block">
-							Ваше письмо отправлено <br/>
-							Подождите минуту.<br/>
+							Your letter has been sent <br/>
+							Wait a minute.<br/>
 							<img class="loading-gif" src="${Constants.URL}img/loading-x.gif" />
 						</div>
 					</div>
@@ -300,16 +300,16 @@ E-mail и Вы гарантированно получите тщательно 
 		<div class="container">
 			<div class="row">
                             <div class="col-md-6 adress-block">
-                                Лицензия: <a target="_blank" href="${Constants.URL}img/lic.jpg">АЕ № 185710 выдана Государственным агентством Украины по туризму и курортам <img src="${Constants.URL}img/pdf.png" alt="PDF"></a> <br/>
-                                <p>89313 Украина, Закарпатская область, Свалявский район, <br/>с. Поляна, ул. Курортная 10</p>
+                                License: <a target="_blank" href="${Constants.URL}img/lic.jpg">АЕ № 185710 выдана Государственным агентством Украины по туризму и курортам <img src="${Constants.URL}img/pdf.png" alt="PDF"></a> <br/>
+                                <p>10 Kurortna St., Poliana, Slaliava district, Thranscarpathian region, <br/> 89313 Ukraine</p>
                                 
 
                             </div>
                             <div class="col-md-3 contacts-block">
                                 
-                                <span style="letter-spacing: -1px;">Тел: +38 (0312) 44-30-54, 44-30-24,</span><br/>
-                                Факс: +38 (0312) 44-30-24<br/> 
-                                Моб. тел.: +380949183054<br/>
+                                <span style="letter-spacing: -1px;">Tel: +38 (0312) 44-30-54, 44-30-24,</span><br/>
+                                Fax: +38 (0312) 44-30-24<br/> 
+                                Mobile: +380949183054<br/>
                                 E-mail: <a href="mailto:sonyachna-dolyna@ukr.net">sonyachna-dolyna@ukr.net</a>
                                 <p class="facebook">
                                     <a href="https://www.facebook.com/sunvalley2014" target="_blank">
@@ -319,7 +319,7 @@ E-mail и Вы гарантированно получите тщательно 
                                 
                             </div>
                             <div class="col-md-3 contact-block">
-                                <a href="#contact" id="show-contact" class="btn btn-skin btn-lg btn-scroll btn-contact">Связаться</a>
+                                <a href="#contact" id="show-contact" class="btn btn-skin btn-lg btn-scroll btn-contact">Contact us</a>
                                 <p>  Developed by <a href="http://www.aits.ua/" target="_blank"><span class="reserved"> AITS </span>2016</a>
                                          <a class="enter-link" target="_blank" href="<c:url value="/system/login" />"><img src="${Constants.URL}img/enter-icon.png" alt=""/></a>
                                 </p>

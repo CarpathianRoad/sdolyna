@@ -14,7 +14,7 @@
 					
 						<div class="section-heading text-center">
 						<div class="wow bounceInDown" data-wow-delay="0.2s">
-							<h2>Детские лагеря</h2>
+							<h2>${translate.camps}</h2>
 						</div>
 						</div>
 					
@@ -44,8 +44,8 @@
                                    <table id="table-content"  class="table red-hr">
                                     <thead class="thead-inverse">
                                       <tr>
-                                        <th style="width:30%">Дата</th>
-                                        <th style="width:70%">Название</th>
+                                        <th style="width:30%">${translate.date}</th>
+                                        <th style="width:70%">${translate.titletable}</th>
                                       </tr>
                                     </thead>
                                     <tbody>

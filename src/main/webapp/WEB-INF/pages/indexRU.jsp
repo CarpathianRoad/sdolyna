@@ -255,7 +255,7 @@ E-mail и Вы гарантированно получите тщательно 
                         </div>
                         <div class="form-group">
                             <label for="email">
-                                Ваш Email </label>
+                                Email </label>
                                 <input type="email" class="form-control" id="email" placeholder="Введите email" required="required" />
                         </div>
           

@@ -23,6 +23,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+import ua.aits.sdolyna.functions.TranslateElements;
 import ua.aits.sdolyna.model.ArticleModel;
 
 /**
@@ -58,29 +59,35 @@ public class MainController {
     @RequestMapping(value = {"/{lan}/articles/full/{id}"}, method = RequestMethod.GET)
     public ModelAndView article(@PathVariable("lan") String lan, @PathVariable("id") String id, HttpServletRequest request, HttpServletResponse response) throws SQLException, ClassNotFoundException, InstantiationException, IllegalAccessException, ParseException  {
         ModelAndView model = new ModelAndView("full");
+        TranslateElements translate = new TranslateElements(lan);
         model.addObject("article", Articles.getArticleByIDAndLan(id, lan));
         model.addObject("lan", lan);
         model.addObject("fullURLEN","en/articles/full/"+id);
         model.addObject("fullURLRU","ru/articles/full/"+id);
+        model.addObject("translate",translate);
         return model;
     }
     
     @RequestMapping(value = {"/{lan}/articles/festivals"}, method = RequestMethod.GET)
     public ModelAndView festivals(@PathVariable("lan") String lan, HttpServletRequest request, HttpServletResponse response) throws SQLException, ClassNotFoundException, InstantiationException, IllegalAccessException, ParseException  {
         ModelAndView model = new ModelAndView("festivals");
+        TranslateElements translate = new TranslateElements(lan);
         model.addObject("festivals", Articles.getArticlesByTypeAndLan("1", lan));
         model.addObject("lan", lan);
         model.addObject("fullURLEN","en/articles/festivals");
         model.addObject("fullURLRU","ru/articles/festivals");
+        model.addObject("translate",translate);
         return model;
     }
     @RequestMapping(value = {"/{lan}/articles/camps"}, method = RequestMethod.GET)
     public ModelAndView camps(@PathVariable("lan") String lan, HttpServletRequest request, HttpServletResponse response) throws SQLException, ClassNotFoundException, InstantiationException, IllegalAccessException, ParseException  {
         ModelAndView model = new ModelAndView("camps");
+        TranslateElements translate = new TranslateElements(lan);
         model.addObject("camps", Articles.getArticlesByTypeAndLan("3", lan));
         model.addObject("lan", lan);
         model.addObject("fullURLEN","en/articles/camps");
         model.addObject("fullURLRU","ru/articles/camps");
+        model.addObject("translate",translate);
         return model;
     }
     
