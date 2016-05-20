@@ -5,6 +5,8 @@
  */
 package ua.aits.sdolyna.controller;
 
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.util.Properties;
@@ -23,6 +25,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+import ua.aits.sdolyna.functions.Helpers;
 import ua.aits.sdolyna.functions.TranslateElements;
 import ua.aits.sdolyna.model.ArticleModel;
 
@@ -123,5 +126,29 @@ public class MainController {
 	} catch (MessagingException e) {
             throw new RuntimeException(e);
 	}
+    }
+    @RequestMapping(value = {"/404", "/Sdolyna/404"})
+	public ModelAndView error404(HttpServletRequest request,
+   		 HttpServletResponse response)  {
+   	 ModelAndView model = new ModelAndView("/error/404");
+             	model.addObject("lan", "en");
+   	 return model;
+    }
+        Helpers helpers = new Helpers();
+	@RequestMapping(value = {"/500", "/Sdolyna/500"})
+	public ModelAndView error500(HttpServletRequest request,
+   		 HttpServletResponse response)  {
+            Throwable exception = (Throwable) request.getAttribute("javax.servlet.error.exception");
+            String url = request.getRequestURL().toString() + "?" + request.getQueryString();
+            StringWriter sw = new StringWriter();
+            PrintWriter pw = new PrintWriter(sw);
+            exception.printStackTrace(pw);
+            helpers.sendMail(url, sw.toString());
+   	 ModelAndView model = new ModelAndView("/error/500");
+             	model.addObject("lan", "en");
+        TranslateElements translate = new TranslateElements("en");
+        model.addObject("lan", "en");
+        model.addObject("translate",translate);
+   	 return model;
     }
 }
